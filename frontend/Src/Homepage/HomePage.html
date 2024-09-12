@@ -6,13 +6,15 @@
     <title>WoLJournal</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="images" type="jpg" href="../Images/fflogo.jpg">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 <body>
 
  <div style="width: 10%;">
-     <img id="logo" src="../Images/fflogo.jpg" alt="fflogo">
+     <a href="../Homepage/HomePage.html"><img id="logo" src="../Images/fflogo.jpg" alt="fflogo"></a>
  </div>
 
     <div class="topnav">
@@ -22,11 +24,10 @@
             <a href="about.asp" class="link">Support</a>
     </div>
 
-
-<main>
+<div id="main">
 
  <div id="leftSide">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -34,13 +35,13 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img id="firstslide" class="d-block w-100" src="" alt="">
+            <img id="firstslide" class="d-block w-100" src="../Images/ff14bg.jpg" alt="">
           </div>
           <div class="carousel-item">
-            <img id="secondslide" class="d-block w-100" src="" alt="">
+            <img id="secondslide" class="d-block w-100" src="../Images/ffxivalljobs.jpg" alt="">
           </div>
           <div class="carousel-item">
-            <img id="thirdslide" class="d-block w-100" src="." alt="">
+            <img id="thirdslide" class="d-block w-100" src="../Images/ffxivnewsbg.jpg" alt="">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -51,6 +52,33 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
+      </div> -->
+
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../Images/ff14bg.jpg">~
+          </div>
+          <div class="carousel-item">
+            <img src="../Images/ffxivcommunitybg.jpg">
+          </div>
+          <div class="carousel-item">
+            <img src="../Images/ffxivcrafting.webp">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
 
       <div class="infoBar">
@@ -65,32 +93,31 @@
             <li class="listItem">example</li>
         </ol>
       </div>
-
-
  </div>
-</main>
 
+   <div id="rightSide">
 
+   <div id="loginContainer">
 
+    <div id="pfpContainer">
+     <img src="../Images/fflogo.jpg" id="characterPortrait">
+    </div>
 
+     <div id="acclinkContainer" style="font-family: WoodGod;">
+      <a class="loginLink" >Login</a>
+      <a class="signupLink">Sign Up!</a>
+     </div>
 
+   </div>
 
+  <div class="jobguideContainer">
 
+    <button id="jobguideButton" >Job Guide</button>
+    <button id="craftguideButton">Craft Guide</button>
+  </div>
 
-
-
-
-
-      <!-- <div>
-        <button id="">yo</button>
-      </div>
-
-      <div>
-
-        <button id="jobguideButton">Job Guide</button>
-        <button>Craft Guide</button>
-      </div> -->
-
+   </div>
+</div>
  
     <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'WoodGod';
+    src: url("../Font/WoodgodRegular-3zpjG.ttf");
+}
+
 body{
     background-image: url(../Images/ff14bg.jpg);
     background-repeat: no-repeat;
@@ -23,7 +28,7 @@ body{
     border-radius: 40%;
 }
 .topnav{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.865);
     display: flex;
     justify-content: space-evenly;
     font-size: 80px;
@@ -37,9 +42,9 @@ body{
 }
 .link{
     color: whitesmoke;
+    font-family: WoodGod;
     font-size: 70%;
-    margin-top: 10px;
-    
+    margin-top: 10px;   
 }
 .link:hover{
     color: rgba(245, 245, 245, 0.744);
@@ -50,18 +55,20 @@ body{
     background-size:cover;
     color: whitesmoke;
     font-style: italic;
+    font-family: WoodGod;
     display: flex;
     height: 300px;
     width: 700px;
     border: solid black;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: 13%;
+    margin-left: auto; 
     border-radius: 30px;
     font-size: 80px;
     margin-top: -8%;
     box-shadow: 10px 10px 10px black;
+    margin-top: 40%;
+    margin-right: 23%;
 }
 #jobguideButton:hover{
     box-shadow: 20px 20px 10px goldenrod;
@@ -73,13 +80,19 @@ body{
     width: 65%;
     
 }
+#rightSide{
+    height: 100%;
+    width: 30%
+}
 
-main{
+#main{
+    display: flex;
+    flex-direction: row;
     height: 80%;
     width: 100%;
 }
 .infoBar{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.852);
     display: flex;
     justify-content: space-evenly;
     font-size: 80px;
@@ -88,21 +101,98 @@ main{
     width: 60%;
     margin-top: 5%;
     margin-left: 37%;
-    margin-bottom: 1%;
-    
+    margin-bottom: 1%;   
     border-radius: 50px;
 
 }
 .info{
-    background: #d9d9d9de;
+    background: #eeedede9;
     height: 50%;
     width: 70%;
-    margin-left: 30%;
+    margin-left: 33%;
     border-radius: 30px;
     font-size: 45px;
     padding-top: 1%;
     padding-left: 1%;
 }
+#loginContainer{
+    display: flex;
+    border: solid;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.863);
+    font-style: italic;
+    width: 55%;
+    height: 11%;
+    margin-top: 18%;
+    margin-left: 20%;
+}
+.loginLink{
+    font-size: 50px;
+    color: #f5f5f5;   
+}
+.loginLink:hover{
+    color: #d1cfcf;
+}
+.signupLink{
+    font-size: 50px;
+    color: #f5f5f5;
+    border-top: white 2px solid;
+}
+.signupLink:hover{
+    color: #d1cfcf
+}
+#characterPortrait{
+    width: 125px;
+    border-radius: 100%;
+    border: solid;
+    border-color: white;    
+}
+#acclinkContainer{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#pfpContainer{
+    display: flex;
+    height:100px;
+    width: 100px;
+    margin-left: 10%;
+    margin-top: 7%;
+    margin-right: -5%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+#craftguideButton{
+    background-image: url(../Images/ffxivcrafting.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: whitesmoke;
+    font-style: italic;
+    font-family: WoodGod;
+    display: flex;
+    height: 300px;
+    width: 700px;
+    border: solid black;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    border-radius: 30px;
+    font-size: 80px;
+    margin-top: -8%;
+    box-shadow: 10px 10px 10px black;
+    margin-top: 5%;
+    margin-right: 23%;
+}
+#craftguideButton:hover{
+    box-shadow: 20px 20px 10px goldenrod;
+    border-color: goldenrod;
+}
+
+
 
 
 
