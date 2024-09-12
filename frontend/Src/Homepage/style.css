@@ -1,0 +1,109 @@
+body{
+    background-image: url(../Images/ff14bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+#carouselExampleIndicators{
+    background-color: black;
+    display: flex;
+    height: 35%;
+    width: 60%;
+    margin-top: 6%;
+    margin-left: 37%;
+    border-radius: 40px;
+}
+
+#logo{
+    height: auto;
+    width: auto;
+    margin-left: 80%;
+    margin-top: 5%;
+    border-radius: 40%;
+}
+.topnav{
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 80px;
+    font-style: italic;
+    border: solid; 
+    width: 70%;
+    height: 100px;
+    margin-left: 20%;
+    margin-top: -4%;
+    border-radius: 30px;
+}
+.link{
+    color: whitesmoke;
+    font-size: 70%;
+    margin-top: 10px;
+    
+}
+.link:hover{
+    color: rgba(245, 245, 245, 0.744);
+}
+#jobguideButton{
+    background-image: url(../Images/ffxivalljobs.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: whitesmoke;
+    font-style: italic;
+    display: flex;
+    height: 300px;
+    width: 700px;
+    border: solid black;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 13%;
+    border-radius: 30px;
+    font-size: 80px;
+    margin-top: -8%;
+    box-shadow: 10px 10px 10px black;
+}
+#jobguideButton:hover{
+    box-shadow: 20px 20px 10px goldenrod;
+    border-color: goldenrod;
+    
+}
+#leftSide{
+    height: 100%;
+    width: 65%;
+    
+}
+
+main{
+    height: 80%;
+    width: 100%;
+}
+.infoBar{
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 80px;
+    font-style: italic;
+    border: solid; 
+    width: 60%;
+    margin-top: 5%;
+    margin-left: 37%;
+    margin-bottom: 1%;
+    
+    border-radius: 50px;
+
+}
+.info{
+    background: #d9d9d9de;
+    height: 50%;
+    width: 70%;
+    margin-left: 30%;
+    border-radius: 30px;
+    font-size: 45px;
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+
+
+
