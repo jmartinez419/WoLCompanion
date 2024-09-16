@@ -79,7 +79,6 @@ body{
 #leftSide{
     height: 100%;
     width: 65%;
-    
 }
 #rightSide{
     height: 100%;
@@ -115,6 +114,11 @@ body{
     font-size: 45px;
     padding-top: 1%;
     padding-left: 1%;
+}
+.listItem{
+    margin-left: 2%;
+    margin-bottom: 1%;
+    margin-right: 2%;
 }
 #loginContainer{
     display: flex;
