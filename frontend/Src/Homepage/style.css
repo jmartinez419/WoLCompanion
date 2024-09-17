@@ -82,7 +82,7 @@ body{
 }
 #rightSide{
     height: 100%;
-    width: 30%
+    width: 30%;
 }
 
 #main{
@@ -119,6 +119,17 @@ body{
     margin-left: 2%;
     margin-bottom: 1%;
     margin-right: 2%;
+}
+a{
+    color: inherit;
+}
+#listitemimg{
+    width: 80%;
+    border-radius: 30px;
+}
+#listlogoimg{
+    width: 10%;
+    border-radius: 10px;
 }
 #loginContainer{
     display: flex;

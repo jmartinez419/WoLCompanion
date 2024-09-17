@@ -49,6 +49,9 @@ body{
     width: 65%;
 }
 #rightSide{
+    margin-right: 2%;
+    right: 0;
+    position: fixed;
     height: 100%;
     width: 30%
 }
@@ -81,9 +84,15 @@ body{
     margin-bottom: 1%;
     margin-right: 2%;
 }
+#listlogoimg{
+    width: 10%;
+    border-radius: 15px;
+    
+}
 #listitemimg{
     background-color: black;
-    width: 15%;
+    border-radius: 10px;
+    width: 80%;
     height: 20%;
     margin-bottom: 3%;
     margin-right: 3%;
