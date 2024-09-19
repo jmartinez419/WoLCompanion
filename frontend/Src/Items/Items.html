@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WoLJournal</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<link href="search-filter.css" rel="stylesheet">
+<!-- <link href="search-filter.css" rel="stylesheet"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="./style.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -16,47 +17,64 @@
     </div>
    
        <div class="topnav">
+               <a href="../Homepage/HomePage.html" class="link">Home</a>
                <a href="../News/NewsPage.html" class="link">News</a>
-               <a href="news.asp" class="link">Profile</a>
-               <a href="contact.asp" class="link">Items</a>
+               <a href="contact.asp" class="link">Profile</a>
                <a href="about.asp" class="link">Support</a>
        </div>
 
-    <!-- <div class="container">
-        <div class="row searchFilter" >
-           <div class="col-sm-12" >
-            <div class="input-group" >
-             <input id="table_filter" type="text" class="form-control" aria-label="Text input with segmented button dropdown" >
-             <div class="input-group-btn" >
-              <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="label-icon" >Category</span> <span class="caret" >&nbsp;</span></button>
-              <div class="dropdown-menu dropdown-menu-right" >
-                 <ul class="category_filters" >
-                  <li >
-                   <input class="cat_type category-input" data-label="All" id="all" value="" name="radios" type="radio" ><label for="all" >All</label>
-                  </li>
-                  <li >
-                   <input type="radio" name="radios" id="Design" value="Design" ><label class="category-label" for="Design" >Design</label>
-                  </li>
-                  <li >
-                   <input type="radio" name="radios" id="Marketing" value="Marketing" ><label class="category-label" for="Marketing" >Marketing</label>
-                  </li>
-                  <li >
-                   <input type="radio" name="radios" id="Programming" value="Programming" ><label class="category-label" for="Programming" >Programming</label>
-                  </li>
-                  <li >
-                   <input type="radio" name="radios" id="Sales" value="Sales" ><label class="category-label" for="Sales" >Sales</label>
-                  </li>
-                  <li >
-                   <input type="radio" name="radios" id="Support" value="Support" ><label class="category-label" for="Support" >Support</label>
-                  </li>
-                 </ul>
+       <div id="main">
+
+        <div id="leftSide">
+            <div class="container" style="margin-top: 10%; margin-left: 35%; width: 70%; font-family: WoodGod;">
+                <div class="row searchFilter" >
+                   <div class="col-sm-12" >
+                    <div class="input-group" >
+                     <input id="table_filter" type="text" class="form-control" aria-label="Text input with segmented button dropdown" >
+                     <div class="input-group-btn" >
+                      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="label-icon" >Category</span> <span class="caret" >&nbsp;</span></button>
+                      <div class="dropdown-menu dropdown-menu-right" style="width: 190px;" >
+                         <ul class="category_filters" style="list-style: none;">
+                          <li >
+                           <input class="cat_type category-input" data-label="All" id="all" value="" name="radios" type="radio" ><label for="all" style="margin-left: 10px;">All</label>
+                          </li>
+                          <li >
+                           <input type="radio" name="radios" id="mounts" value="mounts" ><label class="category-label" for="mounts" >Mounts</label>
+                          </li>
+                          <li >
+                           <input type="radio" name="radios" id="minions" value="minions" ><label class="category-label" for="minions" >Minions</label>
+                          </li>
+                          <li >
+                           <input type="radio" name="radios" id="achievements" value="achievements" ><label class="category-label" for="achievements" >Achievements</label>
+                          </li>
+                          <li >
+                           <input type="radio" name="radios" id="hairStyles" value="hairStyles" ><label class="category-label" for="hairStyles" >Hair Styles</label>
+                          </li>
+                          <li >
+                           <input type="radio" name="radios" id="orchestrion" value="orchestrion" ><label class="category-label" for="orchestrion" >Orchestrion</label>
+                          </li>
+                          <li >
+                            <input type="radio" name="radios" id="emotes" value="emotes" ><label class="category-label" for="emotes" >Emotes</label>
+                           </li>
+                         </ul>
+                      </div>
+                      <button id="searchBtn" type="button" class="btn btn-secondary btn-search" ><span class="glyphicon glyphicon-search" >&nbsp;</span> <span class="label-icon" >Search</span></button>
+                     </div>
+                    </div>
+                   </div>
+                </div>
               </div>
-              <button id="searchBtn" type="button" class="btn btn-secondary btn-search" ><span class="glyphicon glyphicon-search" >&nbsp;</span> <span class="label-icon" >Search</span></button>
-             </div>
-            </div>
-           </div>
+
+              <div id="itemContainer">
+                <ol id="itemlist" style="list-style: none;">
+
+                </ol>
+              </div>
+
         </div>
-      </div>
-     -->
+
+    </div>
+    
+    <script src="app.js"></script>
 </body>
 </html>

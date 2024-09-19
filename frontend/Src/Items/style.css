@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'WoodGod';
+    src: url("../Font/WoodgodRegular-3zpjG.ttf");
+}
+body{
+    background-image: url(../Images/ff14itemsbg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+#main{
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 100%;
+}
+.topnav{
+    background-color: rgba(0, 0, 0, 0.865);
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 60px;
+    font-style: italic;
+    border: solid; 
+    width: 70%;
+    height: 10%;
+    margin-left: 20%;
+    margin-top: -6%;
+    border-radius: 30px;
+}
+.link{
+    color: whitesmoke;
+    font-family: WoodGod;
+    font-size: 70%; 
+    text-decoration: none;
+}
+.link:hover{
+    color: rgba(245, 245, 245, 0.744);
+}
+#logo{
+    width: 8%;
+    margin-left: 8%;
+    margin-top: 1%;
+    border-radius: 45px;
+}
+#main{
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 100%;
+}
+#leftSide{
+    height: 100%;
+    width: 65%;
+}
+.category-label{
+    margin-left: 10px;
+
+}
+#itemContainer{
+    background: #eeedede9;
+    height: 100%;
+    width: 70%;
+    margin-left: 35%;
+    border-radius: 30px;
+    font-size: 30px;
+    padding-top: 1%;
+    padding-left: 1%;
+    margin-top: 1%;
+}
+
+#itemlist{
+    margin-left: 2%;
+    margin-bottom: 4%;
+    margin-right: 2%;
+}
+
+
