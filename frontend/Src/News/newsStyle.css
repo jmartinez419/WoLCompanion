@@ -19,13 +19,13 @@ body{
     background-color: rgba(0, 0, 0, 0.865);
     display: flex;
     justify-content: space-evenly;
-    font-size: 80px;
+    font-size: 60px;
     font-style: italic;
     border: solid; 
     width: 70%;
-    height: 100px;
+    height: 10%;
     margin-left: 20%;
-    margin-top: -4%;
+    margin-top: -5%;
     border-radius: 30px;
 }
 .link{
@@ -33,15 +33,15 @@ body{
     font-family: WoodGod;
     font-size: 70%;
     margin-top: 10px;   
+    text-decoration: none;
 }
 .link:hover{
     color: rgba(245, 245, 245, 0.744);
 }
 #logo{
-    height: auto;
-    width: auto;
+    width: 75%;
     margin-left: 80%;
-    margin-top: 5%;
+    margin-top: 10%;
     border-radius: 45px;
 }
 #leftSide{
@@ -59,7 +59,7 @@ body{
     background-color: rgba(0, 0, 0, 0.852);
     display: flex;
     justify-content: space-evenly;
-    font-size: 80px;
+    font-size: 60px;
     font-style: italic;
     border: solid; 
     width: 80%;
@@ -67,7 +67,12 @@ body{
     margin-left: 29%;
     margin-bottom: 1%;   
     border-radius: 50px;
-
+}
+a {
+    text-decoration: none !important;
+  }
+b{
+    color: black; 
 }
 .info{
     background: #eeedede9;
@@ -75,13 +80,13 @@ body{
     width: 70%;
     margin-left: 33%;
     border-radius: 30px;
-    font-size: 45px;
+    font-size: 30px;
     padding-top: 1%;
     padding-left: 1%;
 }
 .listItem{
     margin-left: 2%;
-    margin-bottom: 1%;
+    margin-bottom: 4%;
     margin-right: 2%;
 }
 #listlogoimg{
@@ -92,8 +97,10 @@ body{
 #listitemimg{
     background-color: black;
     border-radius: 10px;
-    width: 80%;
+    width: 90%;
     height: 20%;
+    margin-left: 2%;
+    margin-top: 2%;
     margin-bottom: 3%;
     margin-right: 3%;
 }
@@ -103,20 +110,20 @@ body{
     border-radius: 40px;
     background-color: rgba(0, 0, 0, 0.863);
     font-style: italic;
-    width: 55%;
+    width: 60%;
     height: 11%;
-    margin-top: 18%;
-    margin-left: 35%;
+    margin-top: 7%;
+    margin-left: 23%;
 }
 .loginLink{
-    font-size: 50px;
+    font-size: 30px;
     color: #f5f5f5;   
 }
 .loginLink:hover{
     color: #d1cfcf;
 }
 .signupLink{
-    font-size: 50px;
+    font-size: 30px;
     color: #f5f5f5;
     border-top: white 2px solid;
 }
@@ -124,7 +131,7 @@ body{
     color: #d1cfcf
 }
 #characterPortrait{
-    width: 125px;
+    width: 70px;
     border-radius: 100%;
     border: solid;
     border-color: white;    
@@ -135,18 +142,16 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
 }
 #pfpContainer{
     display: flex;
-    height:100px;
-    width: 100px;
-    margin-left: 10%;
-    margin-top: 7%;
+    height:10px;
+    width: 10px;
+    margin-left: 23%;
+    margin-top: 13%;
     margin-right: -5%;
     justify-content: center;
     align-items: center;
-    padding-bottom: 5%;
 }
 #craftguideButton{
     background-image: url(../Images/ffxivcrafting.webp);
@@ -156,21 +161,21 @@ body{
     font-style: italic;
     font-family: WoodGod;
     display: flex;
-    height: 300px;
-    width: 700px;
+    height: 200px;
+    width: 80%;
     border: solid black;
     justify-content: center;
     align-items: center;
-    margin-left: 30%;
+    margin-left: 12%;
     border-radius: 30px;
     font-size: 80px;
     margin-top: -8%;
-    box-shadow: 10px 10px 10px black;
+    box-shadow: 14px 1px 10px black;
     margin-top: 5%;
     margin-right: 23%;
 }
 #craftguideButton:hover{
-    box-shadow: 20px 20px 10px goldenrod;
+    box-shadow: 14px 1px 10px goldenrod;
     border-color: goldenrod;
 }
 #jobguideButton{
@@ -181,33 +186,46 @@ body{
     font-style: italic;
     font-family: WoodGod;
     display: flex;
-    height: 300px;
-    width: 700px;
+    height: 200px;
+    width: 80%;
     border: solid black;
     justify-content: center;
     align-items: center;
-    margin-left: 30%; 
+    margin-left: 12%; 
     border-radius: 30px;
     font-size: 80px;
-    box-shadow: 10px 10px 10px black;
-    margin-top: 30%;
+    box-shadow: 14px 1px 10px black;
+    margin-top: 15%;
     margin-right: 23%;
 }
 #jobguideButton:hover{
-    box-shadow: 20px 20px 10px goldenrod;
-    border-color: goldenrod;
-    
+    box-shadow: 14px 1px 10px goldenrod;
+    border-color: goldenrod;   
 }
 
-@media (max-width: 3000px) {
+
+@media (max-width: 1440px) {
 
     #craftguideButton{
         margin-left: 29%;
         width: 50%;
+        font-size: 40px;
     }
 
     #jobguideButton{
         margin-left: 29%;
         width: 50%;
+        font-size: 40px;
+    }
+    #loginContainer{
+        width: 60%;
+        margin-right: auto;
+    } 
+    #characterPortrait{
+        margin-top: 10px;
+        width: 60px;
+    }
+    .infoBar{
+        font-size: 40px;
     }
 }
