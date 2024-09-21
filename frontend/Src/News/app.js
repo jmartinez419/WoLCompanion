@@ -122,7 +122,8 @@ async function getUpdatesInfo(Length){
         for(let i = 0; i<=Length; i++){
             listitems.innerHTML +=
             
-            `<li class="listItem"><a href="${data.updates[i].url}"><img id="listlogoimg" src="../Images/fflogo.jpg">
+            `<li class="listItem">
+            <a href="${data.updates[i].url}"><img id="listlogoimg" src="../Images/fflogo.jpg">
             <b>${data.updates[i].title}</b></a><br/>
             Date: ${data.updates[i].time}</br>
             </li>`   
