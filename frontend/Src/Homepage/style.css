@@ -18,16 +18,14 @@ body{
     margin-left: 37%;
 }
 .slide{
-    
     width: 100%;
     border-radius: 40px;
 }
 #logo{
-    height: 5%;
     width: 8%;
-    margin-left: 10%;
+    margin-left: 8%;
     margin-top: 1%;
-    border-radius: 40%;
+    border-radius: 45px;
 }
 .topnav{
     background-color: rgba(0, 0, 0, 0.865);
@@ -39,19 +37,18 @@ body{
     width: 70%;
     height: 10%;
     margin-left: 20%;
-    margin-top: -7%;
+    margin-top: -6%;
     border-radius: 30px;
 }
 .link{
     color: whitesmoke;
     text-decoration: none;
     font-family: WoodGod;
-    font-size: 70%;
-    margin-top: 10px;
-    margin-bottom: 10px;   
+    font-size: 70%;  
 }
 .link:hover{
     color: rgba(245, 245, 245, 0.744);
+    text-decoration: underline;
 }
 #jobguideButton{
     background-image: url(../Images/ffxivalljobs.jpg);
@@ -148,9 +145,6 @@ body{
     margin-right: 2%;
     list-style: none;
 }
-a {
-    text-decoration: none !important;
-  }
 b{
     color: black; 
 }

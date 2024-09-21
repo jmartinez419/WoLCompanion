@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'WoodGod';
+    src: url("../Font/WoodgodRegular-3zpjG.ttf");
+}
+body{
+    background-image: url(../Images/ffxivprofilebg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.topnav{
+    background-color: rgba(0, 0, 0, 0.865);
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 60px;
+    font-style: italic;
+    border: solid; 
+    width: 70%;
+    height: 10%;
+    margin-left: 20%;
+    margin-top: -6%;
+    border-radius: 30px;
+}
+.link{
+    color: whitesmoke;
+    font-family: WoodGod;
+    font-size: 70%; 
+    text-decoration: none;
+}
+.link:hover{
+    color: rgba(245, 245, 245, 0.744);
+}
+#logo{
+    width: 8%;
+    margin-left: 8%;
+    margin-top: 1%;
+    border-radius: 45px;
+}
+#main{
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 100%;
+}
