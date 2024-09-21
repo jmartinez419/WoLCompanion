@@ -53,13 +53,121 @@ body{
     height: 100%;
     width: 65%;
 }
+#rightSide{
+    margin-right: 2%;
+    right: 0;
+    position: fixed;
+    height: 100%;
+    width: 30%
+}
+#loginContainer{
+    display: flex;
+    border: solid;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.863);
+    font-style: italic;
+    width: 60%;
+    height: 11%;
+    margin-top: 7%;
+    margin-left: 23%;
+}
+
+.loginLink{
+    font-size: 30px;
+    color: #f5f5f5;   
+}
+.loginLink:hover{
+    color: #d1cfcf;
+}
+.signupLink{
+    font-size: 30px;
+    color: #f5f5f5;
+    border-top: white 2px solid;
+}
+.signupLink:hover{
+    color: #d1cfcf
+}
+#characterPortrait{
+    width: 70px;
+    border-radius: 100%;
+    border: solid;
+    border-color: white;    
+}
+#acclinkContainer{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#pfpContainer{
+    display: flex;
+    height:10px;
+    width: 10px;
+    margin-left: 23%;
+    margin-top: 13%;
+    margin-right: -5%;
+    justify-content: center;
+    align-items: center;
+}
+.jobguideContainer{
+    margin-top: 20%;
+    margin-left: 8%;
+}
+#craftguideButton{
+    background-image: url(../Images/ffxivcrafting.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: whitesmoke;
+    font-style: italic;
+    font-family: WoodGod;
+    display: flex;
+    height: 200px;
+    width: 70%;
+    border: solid black;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12%;
+    border-radius: 30px;
+    font-size: 80px;
+    margin-top: -8%;
+    box-shadow: 14px 1px 10px black;
+    margin-top: 5%;
+    margin-right: 23%;
+}
+#craftguideButton:hover{
+    box-shadow: 14px 1px 10px goldenrod;
+    border-color: goldenrod;
+}
+#jobguideButton{
+    background-image: url(../Images/ffxivalljobs.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: whitesmoke;
+    font-style: italic;
+    font-family: WoodGod;
+    display: flex;
+    height: 200px;
+    width: 70%;
+    border: solid black;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12%; 
+    border-radius: 30px;
+    font-size: 80px;
+    box-shadow: 14px 1px 10px black;
+    margin-top: 15%;
+    margin-right: 23%;
+}
+#jobguideButton:hover{
+    box-shadow: 14px 1px 10px goldenrod;
+    border-color: goldenrod;   
+}
 .category-label{
     margin-left: 10px;
 
 }
-#itemContainer{
-    
-   
+#itemContainer{ 
     background: #eeedede9;
     height: 100%;
     width: 70%;
