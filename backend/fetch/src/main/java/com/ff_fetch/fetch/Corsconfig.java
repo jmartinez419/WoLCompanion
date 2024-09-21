@@ -19,14 +19,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @EnableWebSecurity
     public class Corsconfig  {
 
-//    @Override
-//    public void addCorsMappings(CorsRegistry registry) {
-//        registry.addMapping("/**")
-//                .allowedOrigins("*")
-//                .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH")
-//                .allowedHeaders("*");
-//    }
-
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
@@ -41,9 +33,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 //
         @Bean
         public CorsConfigurationSource corsConfigurationSource(){
+        
             CorsConfiguration config = new CorsConfiguration();
-
-
             config.addAllowedOrigin("http://localhost:5500");
 
             config.addAllowedMethod("*");
