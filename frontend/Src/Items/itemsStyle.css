@@ -65,7 +65,6 @@ body{
     margin-top: 7%;
     margin-left: 23%;
 }
-
 .loginLink{
     font-size: 30px;
     color: #f5f5f5;   
@@ -195,8 +194,7 @@ body{
 }
 #buttonDiv{
     width: 25%;
-    margin-left: 60%;
-    
+    margin-left: 60%;   
 }
 #addButton{
     width: 30%;
@@ -223,15 +221,13 @@ body{
     color: whitesmoke;
     box-shadow:8px 5px 10px black;
 }
-
 #name{
     margin-left: 30%;
     margin-top: -100px;
     font-size: 40px;;
     text-decoration: underline;
     width: 50%;
-    text-align: center;
-    
+    text-align: center;   
 }
 #patch{
     margin-left: 4%;
@@ -258,9 +254,7 @@ body{
     width: 80%;
     margin-left: 4%;
 }
-
 #itemlist{
-
     margin-left: 1%;
     margin-bottom: 4%;
     margin-right: 5%;
