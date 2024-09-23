@@ -141,7 +141,7 @@ async function getAchievements(inputValue, category){
   for(i = 0; i <= data.results.length; i++){
    itemlist.innerHTML +=
    `<li id="listItem${i}" class="listItem">
-   <img height = "115px" width = "115px" id = "mount_image" src="${data.results[i].icon}">
+   <img id = "achievement_image" src="${data.results[i].icon}">
    <p id="name">
    <b>${data.results[i].name}</b>:
    </p>

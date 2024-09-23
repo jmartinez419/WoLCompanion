@@ -1,26 +1,32 @@
-let characterInfo = document.getElementById(`CharacterStats`)
-let test = document.getElementById(`wishlistButton`)
-let characterImage = document.getElementById(`characterImageContainer`)
+let characterInfo = document.getElementById(`characterInfo`);
+let test = document.getElementById(`wishlistButton`);
+let characterImage = document.getElementById(`characterImageContainer`);
+let wishlistButton = document.getElementById(`wishListButton`);
 
+wishlistButton.addEventListener('click', (event) =>{
+    event.preventDefault()
+   
+    showCharacter();
 
-async function getCharacterInfo(inputValue, category){   
+})
+
+async function getCharacterInfo(){   
     try{
         const response = await fetch(`https://ffxivcollect.com/api/characters/7231112`) //;id will be changed to inputvalue after test
         const data = await response.json()
         console.log(data);
         return data;
     }catch(error){
-        console.log(category + " does not exist.")
+        console.log(" does not exist.")
     }
 }
 
-async function showCharacter(inputVALUE, category){
-    let data = await getCharacterInfo(inputValue, category)
+async function showCharacter(){
+    let data = await getCharacterInfo()
 
-    for(let i = 0; i <= data.results.length; i++){
-        
-        characterInfo.innerHTML += 
-        `<li id="listItem${i} class="listItem">
+    for(i = 0; i <= data.length; i++){
+        characterImage.innerHTML +=
+        `<img id = "characterImage" href="${data.portrait}>
         `
     }
 }

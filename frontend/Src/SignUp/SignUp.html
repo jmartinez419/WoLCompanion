@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoLJournal</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="search-filter.css" rel="stylesheet"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="./profileSignUp.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <div >
+        <a href="../Homepage/HomePage.html"><img id="logo" src="../Images/fflogo.jpg" alt="fflogo"></a>
+    </div>
+   
+       <div class="topnav">
+               <a href="../Homepage/HomePage.html" class="link">Home</a>
+               <a href="../News/NewsPage.html" class="link">News</a>
+               <a href="../Items/Items.html" class="link">Items</a>
+               <a href="../Support/Support.html" class="link">Support</a>
+       </div>
+
+       <div id="main">
+
+        <div id="loginContainer">
+            <div id="formContainer">
+
+                <form id="contactForm">
+                    <div class="credentialscontainer">
+                    <label type="email">Email:</label>
+                    <input type="text" class="credentials" id="emailInput" maxlength="30" name="email" placeholder="example@email.com" required="Required">
+                    </div>
+                    <div class="credentialscontainer">
+                    <label type="username">Username</label>
+                    <input type="text"class="credentials" id="userInput" maxlength="30" name="user" placeholder="John123" required="Required">
+                    </div>
+                    <div class="credentialscontainer">
+                    <label type="name">Password:</label>
+                    <input type="password" class="credentials" id="password" name="password" placeholder="Password" required="Required">
+                    </div>
+                    <div class="credentialscontainer">
+                    <label type="name">Confirm Password</label>
+                    <input type="password" class="credentials" id="confirmPassword" name="password" placeholder="Confirm Password" required="Required">
+                    </div>
+                    <div class="credentialscontainer">
+                    <input id="loginInput" type="submit" value="Login">
+                    </div>
+                </form>
+    
+                <div id="profileOptions">
+                    <a href="../ForgotPassword/ForgotPassword.html" class="loginOptions">Forgot Password</a>
+                    <div id="line"></div>
+                    <a href="../Login/Login.html" class="loginOptions">Sign In</a>
+                </div>
+            </div>
+        </div>
+
+       </div>
+    
+
+    <script src="./app.js"></script>
+    
+</body>
+</html>

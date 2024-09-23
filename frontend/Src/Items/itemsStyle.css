@@ -182,7 +182,19 @@ body{
     height: 40%;
     margin-left: 4%;
     margin-top: 4%;
-
+    background-color: rgba(25, 25, 25, 0.929);
+    border-radius: 20px;
+    box-shadow: 10px 1px 10px;
+}
+#achievement_image{
+    border: solid rgba(138, 175, 196, 0.795);
+    width: 20%;
+    height: 40%;
+    margin-left: 4%;
+    margin-top: 4%;
+    background-color: rgba(25, 25, 25, 0.929);
+    border-radius: 20px;
+    box-shadow: 10px 1px 10px;
 }
 .listItem{
     border: solid;
