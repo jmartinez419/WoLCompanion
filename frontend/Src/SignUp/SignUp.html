@@ -28,7 +28,7 @@
         <div id="loginContainer">
             <div id="formContainer">
 
-                <form id="contactForm">
+                <form id="contactForm" method="post">
                     <div class="credentialscontainer">
                     <label type="email">Email:</label>
                     <input type="text" class="credentials" id="emailInput" maxlength="30" name="email" placeholder="example@email.com" required="Required">
@@ -38,15 +38,15 @@
                     <input type="text"class="credentials" id="userInput" maxlength="30" name="user" placeholder="John123" required="Required">
                     </div>
                     <div class="credentialscontainer">
-                    <label type="name">Password:</label>
+                    <label type="password">Password:</label>
                     <input type="password" class="credentials" id="password" name="password" placeholder="Password" required="Required">
                     </div>
                     <div class="credentialscontainer">
                     <label type="name">Confirm Password</label>
-                    <input type="password" class="credentials" id="confirmPassword" name="password" placeholder="Confirm Password" required="Required">
+                    <input type="password" class="credentials" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required="Required">
                     </div>
                     <div class="credentialscontainer">
-                    <input id="loginInput" type="submit" value="Login">
+                    <input id="loginInput" type="submit" value="submit">
                     </div>
                 </form>
     

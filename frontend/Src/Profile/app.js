@@ -24,9 +24,10 @@ async function getCharacterInfo(){
 async function showCharacter(){
     let data = await getCharacterInfo()
 
-    for(i = 0; i <= data.length; i++){
-        characterImage.innerHTML +=
-        `<img id = "characterImage" href="${data.portrait}>
+    console.log(characterImage);
+    
+        characterImage.innerHTML =
+        `<img id = "characterImage" src="${data.portrait}"/>
         `
-    }
+    
 }
