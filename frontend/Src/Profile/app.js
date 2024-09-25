@@ -6,8 +6,8 @@ let wishlistButton = document.getElementById(`wishListButton`);
 wishlistButton.addEventListener('click', (event) =>{
     event.preventDefault()
    
-    showCharacter();
-
+    showCharacterPortrait();
+    showCharacterStats()
 })
 
 async function getCharacterInfo(){   
@@ -21,13 +21,39 @@ async function getCharacterInfo(){
     }
 }
 
-async function showCharacter(){
+async function showCharacterStats(){
+    let data = await getCharacterInfo()
+    console.log(data)
+
+    characterInfo.innerHTML = 
+    `<div> 
+    <h1 id="name">${data.name}</h1>
+    <div id="charactersheet">
+    <section><b>Server:</b> ${data.server}</section>
+    <br>
+    <section><b>Data Center:</b> ${data.data_center}</section>
+    <br>
+    <section><b>Achievement Amount:</b> ${data.achievements.total}</section>
+    <br>
+    <section><b>Achievement Score:</b> ${data.achievements.ranked_points_total}</section>
+    <br>
+    <section><b>Mount Amount:</b> ${data.mounts.count}</section>
+    <br>
+    <section><b>Minion Amount:</b> ${data.minions.count}</section>
+    <br>
+    <section><b>Orchestrion Amount:</b> ${data.orchestrions.total}</section>
+    <br>
+    </div>
+    </div>
+    `
+}
+
+async function showCharacterPortrait(){
     let data = await getCharacterInfo()
 
     console.log(characterImage);
     
         characterImage.innerHTML =
         `<img id = "characterImage" src="${data.portrait}"/>
-        `
-    
+        ` 
 }

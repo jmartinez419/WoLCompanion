@@ -9,11 +9,12 @@ let form = document.getElementById(`contactForm`)
     password: form.password.value
     }
     sendForm(formData)
-    window.location.replace("http://localhost:5500/frontend/Src/Login/Login.html")    
+    setTimeout(function(){
+    window.location.replace("http://localhost:5500/frontend/Src/Login/Login.html") 
+    }, 2000);   
  })
 
  async function sendForm(formData){
-
 
     if(`${form.password.value}` == `${form.confirmPassword.value}`){
         try{

@@ -1,6 +1,8 @@
 package com.ff_fetch.fetch.impl;
 
 import com.ff_fetch.fetch.Model.User;
+import com.ff_fetch.fetch.Model.itemList;
+import com.ff_fetch.fetch.dto.ItemDto;
 import com.ff_fetch.fetch.dto.UserDto;
 import com.ff_fetch.fetch.repository.ItemRepository;
 import com.ff_fetch.fetch.repository.UserRepository;
@@ -9,6 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -34,11 +37,21 @@ public class UserServiceImpl implements UserService {
         user.setPassword(passwordEncoder.encode(userDto.getPassword()));
         userRepository.save(user);
     }
-//    @Override
-//    public User findUserByEmail(User Email) {
-//
-//        return Email;
-//    }
+
+    public void saveItem(ItemDto itemDto){
+        itemList item = new itemList();
+
+        item.setUID(itemDto.getUID());
+        item.setItemID(itemDto.getItemId());
+        item.setCategory(itemDto.getCategory());
+        itemRepository.save(item);
+    }
+
+    public List <itemList> findItemByUID(Integer UID){
+        List<itemList> Item = itemRepository.findAll();
+        List<itemList> items = Item.stream().filter(Temp -> Temp.getUID().equals(UID)).collect(Collectors.toList());
+        return items;
+    }
 
     public User findUserByEmail(String Email) {
         List<User>Users = userRepository.findAll();

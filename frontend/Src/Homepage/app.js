@@ -5,6 +5,40 @@ const statusLink = document.getElementById(`statuslink`);
 const updatesLink = document.getElementById(`updateslink`);
 const listitems = document.getElementById(`list`);
 const firstslide = document.getElementById(`firstslide`);
+const loginContainer = document.getElementById(`loginContainer`);
+
+window.onload = function(){
+    
+    loginLoad()
+}
+
+
+
+function loginLoad(){
+    if(localStorage.length == 0){
+        
+        loginContainer.innerHTML +=
+        `<div id="pfpContainer">
+        <img src="../Images/fflogo.jpg" id="characterPortrait">
+       </div>
+   
+        <div id="acclinkContainer" style="font-family: WoodGod;">
+         <a href="../Login/Login.html" class="loginLink" >Login</a>
+         <a href="../SignUp/SignUp.html" class="signupLink">Sign Up!</a>
+        </div>
+   `
+    }else loginContainer.innerHTML +=
+    `<div id="pfpContainer">
+    <img src="" id="characterPortrait">
+   </div>
+
+    <div id="acclinkContainer" style="font-family: WoodGod;">
+     <a href="../Profile/Profile.html" class="loginLink" >${JSON.parse(localStorage.getItem("User")).user}</a>
+     <a href="../SignUp/SignUp.html" class="signupLink">Sign Up!</a>
+    </div>`
+}
+
+
 
 
 newLink.addEventListener('click',(event) => {
@@ -43,7 +77,7 @@ statusLink.addEventListener('click',(event) => {
 async function getFirstSlideimg(Length){
     
     try{
-        const response = await fetch('http://localhost:8080/api/test')
+        const response = await fetch('http://localhost:8081/api/test')
         const data = await response.json();
         
 
@@ -60,7 +94,7 @@ async function getFirstSlideimg(Length){
 async function getTopicsInfo(Length){
     
     try{
-        const response = await fetch('http://localhost:8080/api/test')
+        const response = await fetch('http://localhost:8081/api/test')
         const data = await response.json();
         
 
@@ -81,7 +115,7 @@ async function getTopicsInfo(Length){
 async function getMaintenanceInfo(Length){
 
     try{
-        const response = await fetch('http://localhost:8080/api/test')
+        const response = await fetch('http://localhost:8081/api/test')
         const data = await response.json();
         console.log(data.maintenance);
 
@@ -104,7 +138,7 @@ async function getMaintenanceInfo(Length){
 async function getStatusInfo(Length){
 
     try{
-        const response = await fetch('http://localhost:8080/api/test')
+        const response = await fetch('http://localhost:8081/api/test')
         const data = await response.json();
         console.log(data.status);
 

@@ -40,6 +40,16 @@ body{
     margin-top: -6%;
     border-radius: 30px;
 }
+.navlinks{
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: WoodGod;
+    font-size: 70%; 
+}
+.navlinks:hover{
+    color: rgba(245, 245, 245, 0.744);
+    text-decoration: underline !important;
+}
 .link{
     color: whitesmoke;
     text-decoration: none;
@@ -70,7 +80,7 @@ body{
     margin-left: 20%;
 }
 #jobguideButton:hover{
-    box-shadow: 20px 20px 10px goldenrod;
+    box-shadow: 10px 10px 10px goldenrod;
     border-color: goldenrod;   
 }
 #craftguideButton{
@@ -94,7 +104,7 @@ body{
     margin-top: 5%;
 }
 #craftguideButton:hover{
-    box-shadow: 20px 20px 10px goldenrod;
+    box-shadow: 10px 10px 10px goldenrod;
     border-color: goldenrod;
 }
 #leftSide{
@@ -148,6 +158,9 @@ body{
 b{
     color: black; 
 }
+a{
+    text-decoration: none !important;
+}
 
 #listitemimg{
     width: 80%;
@@ -197,8 +210,7 @@ b{
     margin-left: 15%;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
 #pfpContainer{
     display: flex;
@@ -208,8 +220,7 @@ b{
     margin-top: 13%;
     margin-right: -10%;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 

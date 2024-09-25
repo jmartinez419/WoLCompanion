@@ -49,7 +49,7 @@ updatesLink.addEventListener('click',(event) => {
 async function getTopicsInfo(Length){
     
     try{
-        const response = await fetch('http://localhost:8080/api/test')
+        const response = await fetch('http://localhost:8081/api/test')
         const data = await response.json();
         
 
@@ -70,7 +70,7 @@ async function getTopicsInfo(Length){
 async function getMaintenanceInfo(Length){
 
     try{
-        const response = await fetch('http://localhost:8080/api/test')
+        const response = await fetch('http://localhost:8081/api/test')
         const data = await response.json();
         console.log(data.maintenance);
 
@@ -93,7 +93,7 @@ async function getMaintenanceInfo(Length){
 async function getStatusInfo(Length){
 
     try{
-        const response = await fetch('http://localhost:8080/api/test')
+        const response = await fetch('http://localhost:8081/api/test')
         const data = await response.json();
         console.log(data.status);
 
@@ -114,7 +114,7 @@ async function getStatusInfo(Length){
 async function getUpdatesInfo(Length){
 
     try{
-        const response = await fetch('http://localhost:8080/api/test')
+        const response = await fetch('http://localhost:8081/api/test')
         const data = await response.json();
         console.log(data.updates);
 
