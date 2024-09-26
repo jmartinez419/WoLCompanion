@@ -52,6 +52,8 @@ async function getStuff(inputValue, category){
     }
 }
 
+//make another async function that posts to /additem or whatever, also might wanna make sure that a user is logged in for UID
+
 async function getMounts(inputValue, category){
      let data = await getStuff(inputValue, category)
 
