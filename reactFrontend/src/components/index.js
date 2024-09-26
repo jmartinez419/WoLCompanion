@@ -1,0 +1,8 @@
+export {default as Homepage} from "./Homepage/HomePage"
+export {default as Items} from "./Items/ItemsPage"
+export {default as Login} from "./Login/LoginPage"
+export {default as News} from "./News/NewsPage"
+export {default as Profile} from "./Profile/ProfilePage"
+export {default as SignUp} from "./SignUp/SignUp"
+export {default as Support} from "./Support/Support"
+export {default as Routes} from "./Router/Routes"

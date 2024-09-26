@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'WoodGod';
+    src: url("../Font/WoodgodRegular-3zpjG.ttf");
+}
+
+body{
+    background-image: url(../Images/ff14bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+#carouselExampleIndicators{
+    display: flex;
+    height: 3%;
+    width: 60%;
+    margin-top: 6%;
+    margin-left: 37%;
+}
+.slide{
+    width: 100%;
+    border-radius: 40px;
+}
+
+#logo{
+    width: 8%; 
+    margin-top: 1%;
+    border-radius: 45px;
+  
+}
+
+.topnav{
+    background-color: rgba(0, 0, 0, 0.865);
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 60px;
+    font-style: italic;
+    border: solid; 
+    width: 70%;
+    height: 10%;
+    margin-left: 20%;
+    margin-top: -6%;
+    border-radius: 30px;
+}
+.navlinks{
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: WoodGod;
+    font-size: 70%; 
+}
+.navlinks:hover{
+    color: rgba(245, 245, 245, 0.744);
+    text-decoration: underline !important;
+}
+.link{
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: WoodGod;
+    font-size: 70%;  
+}
+.link:hover{
+    color: rgba(245, 245, 245, 0.744);
+    text-decoration: underline;
+}
+#jobguideButton{
+    background-image: url(../Images/ffxivalljobs.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: whitesmoke;
+    font-style: italic;
+    font-family: WoodGod;
+    border: solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 80%;
+    border-radius: 30px;
+    font-size: 80px;
+    box-shadow: 10px 10px 10px black;
+    margin-top: 20%;
+    margin-left: 20%;
+}
+#jobguideButton:hover{
+    box-shadow: 10px 10px 10px goldenrod;
+    border-color: goldenrod;   
+}
+#craftguideButton{
+    background-image: url(../Images/ffxivcrafting.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: whitesmoke;
+    font-style: italic;
+    font-family: WoodGod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 80%;
+    border: solid black;
+    margin-left: 20%;
+    border-radius: 30px;
+    font-size: 80px;
+    margin-top: -8%;
+    box-shadow: 10px 10px 10px black;
+    margin-top: 5%;
+}
+#craftguideButton:hover{
+    box-shadow: 10px 10px 10px goldenrod;
+    border-color: goldenrod;
+}
+#leftSide{
+    height: 100%;
+    width: 65%;
+}
+#rightSide{
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    right: 0;
+    margin-right: 5%;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 100%;
+}
+.infoBar{
+    background-color: rgba(0, 0, 0, 0.852);
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 40px;
+    font-style: italic;
+    border: solid; 
+    width: 60%;
+    margin-top: 2%;
+    margin-left: 37%;
+    margin-bottom: 1%;   
+    border-radius: 50px;
+
+}
+.info{
+    background: #eeedede9;
+    /* height: 100%; */
+    width: 70%;
+    margin-left: 33%;
+    border-radius: 30px;
+    font-size: 25px;
+    padding-top: 1%;
+    padding-left: 1%;
+}
+/* #listItem{
+    margin-left: 2%;
+    margin-bottom: 1%;
+    margin-right: 2%;
+    list-style: none;
+} */
+b{
+    color: black; 
+}
+a{
+    text-decoration: none !important;
+}
+
+#listitemimg{
+    width: 80%;
+    border-radius: 30px;
+}
+#listlogoimg{
+    width: 8%;
+    border-radius: 10px;
+}
+#loginContainer{
+    display: flex;
+    border: solid;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.863);
+    font-style: italic;
+    width: 60%;
+    height: 11%;
+    margin-top: 10%;
+    margin-left: 30%;
+}
+#loginLink{
+    font-size: 30px;
+    color: #f5f5f5; 
+    text-decoration: none;  
+}
+#loginLink:hover{
+    color: #d1cfcf;
+}
+.signupLink{
+    font-size: 30px;
+    color: #f5f5f5;
+    border-top: white 2px solid;
+    text-decoration: none;  
+}
+.signupLink:hover{
+    color: #d1cfcf
+}
+#characterPortrait{
+    width: 70px; 
+    border-radius: 100%;
+    border: solid;
+    border-color: white;    
+}
+#acclinkContainer{
+    display: flex;
+    width:100%;
+    margin-left: 15%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+}
+#pfpContainer{
+    display: flex;
+    height:10px;
+    width: 10px;
+    margin-left: 23%;
+    margin-top: 13%;
+    margin-right: -10%;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+ @media (max-width: 1440px) {
+
+    #craftguideButton{
+        margin-left: 29%;
+        width: 50%;
+        font-size: 40px;
+    }
+
+    #jobguideButton{
+        margin-left: 29%;
+        width: 50%;
+        font-size: 40px;
+    }
+    #loginContainer{
+        width: 60%;
+        margin-right: auto;
+    } 
+    #characterPortrait{
+        margin-top: 10px;
+        width: 60px;
+    }
+}
