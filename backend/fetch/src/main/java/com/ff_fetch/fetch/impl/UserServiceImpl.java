@@ -38,6 +38,13 @@ public class UserServiceImpl implements UserService {
         userRepository.save(user);
     }
 
+    public void saveCharacterId(UserDto userDto){
+        User user = findUserByEmail(userDto.getEmail());
+
+        user.setCharacterId(userDto.getCharacterId());
+        userRepository.save(user);
+    }
+
     public void saveItem(ItemDto itemDto){
         itemList item = new itemList();
 

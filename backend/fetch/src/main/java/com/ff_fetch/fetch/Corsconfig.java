@@ -31,7 +31,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
         http.cors(Customizer.withDefaults()).csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/**","/register","/getUser","/Login","/addItem","/getItems/**").permitAll()
+                        .requestMatchers("/api/**","/register","/getUser","/Login","/addItem","/getItems/**","/inputCharacterId").permitAll()
                         .anyRequest().authenticated());
 
         return http.build();

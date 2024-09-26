@@ -45,4 +45,9 @@ public class userController extends UserServiceImpl {
         System.out.println(item);
         return findItemByUID(item);
     }
+
+    @PutMapping("/inputCharacterId")
+    public void addCharacterId(@RequestBody UserDto user){
+        saveCharacterId(user);
+    }
 }
