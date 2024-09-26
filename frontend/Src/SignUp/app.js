@@ -6,7 +6,8 @@ let form = document.getElementById(`contactForm`)
     let formData = {
     email: form.email.value,
     user: form.user.value,
-    password: form.password.value
+    password: form.password.value,
+    characterId: form.characterId.value
     }
     sendForm(formData)
     setTimeout(function(){

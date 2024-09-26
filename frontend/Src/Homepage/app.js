@@ -7,14 +7,30 @@ const listitems = document.getElementById(`list`);
 const firstslide = document.getElementById(`firstslide`);
 const loginContainer = document.getElementById(`loginContainer`);
 
+
 window.onload = function(){
     
     loginLoad()
+    getTopicsInfo(2);
+    getCharacterImage()
 }
 
 
+async function getCharacterImage(){
+    try{
+        const response = await fetch(`https://ffxivcollect.com/api/characters/${JSON.parse(localStorage.getItem("User")).characterId}`) //;id will be changed to inputvalue after test
+        const data = await response.json()
+        console.log(data);
+        return data;
+    }catch(error){
+        console.log(" does not exist.")
+    }
+}
 
-function loginLoad(){
+
+async function loginLoad(){
+
+    let pfp = await getCharacterImage();
 
     if(JSON.parse(localStorage.getItem("User")) == null){
         
@@ -28,18 +44,19 @@ function loginLoad(){
          <a href="../SignUp/SignUp.html" class="signupLink">Sign Up!</a>
         </div>`
    
-    }else {loginContainer.innerHTML +=
+    }else {
+        loginContainer.innerHTML +=
     `<div id="pfpContainer">
-    <img src="" id="characterPortrait">
+    <img src="${pfp.avatar}" id="characterPortrait">
    </div>
 
     <div id="acclinkContainer" style="font-family: WoodGod;">
      <a href="../Profile/Profile.html" class="loginLink" >${JSON.parse(localStorage.getItem("User")).user}</a>
-     <a href="../SignUp/SignUp.html" class="signupLink">Sign Up!</a>
-    </div>`}
+     <a href="../Login/Login.html" id="logout" class="signupLink">Logout</a>
+    </div>`
 }
 
-
+}
 
 
 newLink.addEventListener('click',(event) => {

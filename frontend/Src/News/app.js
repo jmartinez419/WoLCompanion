@@ -5,7 +5,9 @@ const statusLink = document.getElementById(`statuslink`);
 const updatesLink = document.getElementById(`updateslink`);
 const listitems = document.getElementById(`list`)
 
-
+window.onload = function(){
+    getTopicsInfo(4);
+}
 
 newLink.addEventListener('click',(event) => {
     listitems.innerHTML = ``

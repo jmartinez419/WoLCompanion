@@ -2,50 +2,34 @@ let characterInfo = document.getElementById(`characterInfo`);
 let test = document.getElementById(`wishlistButton`);
 let characterImage = document.getElementById(`characterImageContainer`);
 let wishlistButton = document.getElementById(`wishListButton`);
-let characterId = document.getElementById(`characteridform`)
-
-wishlistButton.addEventListener('click', (event) =>{
-    event.preventDefault()
-   
-    showCharacterPortrait();
-    showCharacterStats()
-})
-
-characterId.addEventListener(`submit`,(event)=>{
-    event.preventDefault()
-    console.dir(form);
-    let formData = {
-        email: JSON.parse(localStorage.getItem("User")).email,
-        characterId: form.characterid.value
-    }
-    setCharacterId(formData);
-})
+let characterId;
 
 
 window.onload = function(){
     
-    gettingCharacterId();
+    showCharacterStats();
+    showCharacterPortrait();
 
 }
 
 
-//doible check if this is the right way to do it, have a hunch that it would be done a different way
-async function setCharacterId(formData){
-    try {
-        const response = await fetch("http://localhost:8081/inputCharacterId", {
-            method: "PUT",
-            body: JSON.stringify(formData),
-            headers: {"Content-Type":"application/json"}
-        })
+//double check if this is the right way to do it, have a hunch that it would be done a different way
+// async function setCharacterId(formData){
+//     try {
+//         const response = await fetch("http://localhost:8081/inputCharacterId", {
+//             method: "PUT",
+//             body: JSON.stringify(formData),
+//             headers: {"Content-Type":"application/json"}
+//         })
         
-    } catch (error) {
-        console.error(error);
-    }
-}
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
 
 async function getCharacterInfo(){   
     try{
-        const response = await fetch(`https://ffxivcollect.com/api/characters/22016774`) //;id will be changed to inputvalue after test
+        const response = await fetch(`https://ffxivcollect.com/api/characters/${JSON.parse(localStorage.getItem("User")).characterId}`) //;id will be changed to inputvalue after test
         const data = await response.json()
         console.log(data);
         return data;
@@ -118,26 +102,26 @@ function loginLoad(){
 
 
 // just make button for the form that lets you input a new character, we can just check if theyre logged in, same as home and then after that just update characterid with a form, same as register,
-function gettingCharacterId(){
+// function gettingCharacterId(){
 
-    if(JSON.parse(localStorage.getItem("User").characterId) == 0){
+//     if(JSON.parse(localStorage.getItem("User")).characterId == 0){
         
-        characterInfo.innerHTML +=
-        `<div id="InstructionContainer">
-        <h1>No Character Linked to profile</h1>
-        <br/>
-        <section><a href="https://na.finalfantasyxiv.com/lodestone/character/">Here</> is where you can search your character and find the Id of your character with an example below.</section
-        <img id="idexample" src="../images/characteridexample.png"/>
-        <section>
-        <form id="characteridform">
-                    <label style="margin-top: 20%;" type="characterid">Character Id:</label>
-                    <input type="number" id="characteridinput" maxlength="30" name="email" placeholder="7231112" required="Required">
-                    <input id="idInput" type="submit" value="characterid">
-        </form>
-        </section>
-        </div>`
+//         characterInfo.innerHTML +=
+//         `<div id="InstructionContainer">
+//         <h1>No Character Linked to profile</h1>
+//         <br/>
+//         <section><a href="https://na.finalfantasyxiv.com/lodestone/character/">Here</a> <p>is where you can search your character and find the Id of your character with an example below.</p></section
+//         <img id = "idexample" src="../Images/characteridexample.png">
+//         <section>
+//         <form id="characteridform">
+//                     <label style="margin-top: 20%;" type="characterid">Character Id:</label>
+//                     <input type="number" id="characteridinput" maxlength="30" name="email" placeholder="7231112" required="Required">
+//                     <input id="idInput" type="submit" value="characterid">
+//         </form>
+//         </section>
+//         </div>`
    
-    }else {showCharacterStats();
-      showCharacterPortrait();
-   }
-}
+//     }else {showCharacterStats();
+//       showCharacterPortrait();
+//    }
+// }

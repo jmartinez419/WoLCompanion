@@ -102,6 +102,9 @@ h1{
     font-family: woodgod;
     text-decoration: underline;
 }
+#idexample{
+    width: 400px;
+}
 #charactersheet{
     display: flex;
     flex-direction: column;

@@ -92,8 +92,12 @@ label{
 }
 #loginInput{
     border-radius: 10px;
-    margin-bottom: 20%;
     box-shadow: 5px 1px 10px;
+    margin-bottom: -18%;
+}
+#characterIdcontainer{
+    margin-bottom: 20%;
+    
 }
 #loginInput:hover{
     background-color: rgb(221, 216, 216);
