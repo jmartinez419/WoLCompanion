@@ -29,6 +29,7 @@ window.onload = function(){
 }
 
 
+//doible check if this is the right way to do it, have a hunch that it would be done a different way
 async function setCharacterId(formData){
     try {
         const response = await fetch("http://localhost:8081/inputCharacterId", {
@@ -115,6 +116,8 @@ function loginLoad(){
     </div>`}
 }
 
+
+// just make button for the form that lets you input a new character, we can just check if theyre logged in, same as home and then after that just update characterid with a form, same as register,
 function gettingCharacterId(){
 
     if(JSON.parse(localStorage.getItem("User").characterId) == 0){
