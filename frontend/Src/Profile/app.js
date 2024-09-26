@@ -2,6 +2,7 @@ let characterInfo = document.getElementById(`characterInfo`);
 let test = document.getElementById(`wishlistButton`);
 let characterImage = document.getElementById(`characterImageContainer`);
 let wishlistButton = document.getElementById(`wishListButton`);
+let characterId = document.getElementById(`characteridform`)
 
 wishlistButton.addEventListener('click', (event) =>{
     event.preventDefault()
@@ -10,9 +11,40 @@ wishlistButton.addEventListener('click', (event) =>{
     showCharacterStats()
 })
 
+characterId.addEventListener(`submit`,(event)=>{
+    event.preventDefault()
+    console.dir(form);
+    let formData = {
+        email: JSON.parse(localStorage.getItem("User")).email,
+        characterId: form.characterid.value
+    }
+    setCharacterId(formData);
+})
+
+
+window.onload = function(){
+    
+    gettingCharacterId();
+
+}
+
+
+async function setCharacterId(formData){
+    try {
+        const response = await fetch("http://localhost:8081/inputCharacterId", {
+            method: "PUT",
+            body: JSON.stringify(formData),
+            headers: {"Content-Type":"application/json"}
+        })
+        
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 async function getCharacterInfo(){   
     try{
-        const response = await fetch(`https://ffxivcollect.com/api/characters/7231112`) //;id will be changed to inputvalue after test
+        const response = await fetch(`https://ffxivcollect.com/api/characters/22016774`) //;id will be changed to inputvalue after test
         const data = await response.json()
         console.log(data);
         return data;
@@ -56,4 +88,59 @@ async function showCharacterPortrait(){
         characterImage.innerHTML =
         `<img id = "characterImage" src="${data.portrait}"/>
         ` 
+}
+
+function loginLoad(){
+
+    if(JSON.parse(localStorage.getItem("User")) == null){
+        
+        loginContainer.innerHTML +=
+        `<div id="pfpContainer">
+        <img src="../Images/fflogo.jpg" id="characterPortrait">
+       </div>
+   
+        <div id="acclinkContainer" style="font-family: WoodGod;">
+         <a href="../Login/Login.html" class="loginLink" >Login</a>
+         <a href="../SignUp/SignUp.html" class="signupLink">Sign Up!</a>
+        </div>`
+   
+    }else {loginContainer.innerHTML +=
+    `<div id="pfpContainer">
+    <img src="" id="characterPortrait">
+   </div>
+
+    <div id="acclinkContainer" style="font-family: WoodGod;">
+     <a href="../Profile/Profile.html" class="loginLink" >${JSON.parse(localStorage.getItem("User")).user}</a>
+     <a href="../SignUp/SignUp.html" class="signupLink">Sign Up!</a>
+    </div>`}
+}
+
+function gettingCharacterId(){
+
+    if(JSON.parse(localStorage.getItem("User").characterId) == 0){
+        
+        characterInfo.innerHTML +=
+        `<div id="InstructionContainer">
+        <h1>No Character Linked to profile</h1>
+        <br/>
+        <section><a href="https://na.finalfantasyxiv.com/lodestone/character/">Here</> is where you can search your character and find the Id of your character with an example below.</section
+        <img id="idexample" src="../images/characteridexample.png"/>
+        <section>
+        <form id="characteridform">
+                    <label style="margin-top: 20%;" type="characterid">Character Id:</label>
+                    <input type="number" id="characteridinput" maxlength="30" name="email" placeholder="7231112" required="Required">
+                    <input id="idInput" type="submit" value="characterid">
+        </form>
+        </section>
+        </div>`
+   
+    }else {loginContainer.innerHTML +=
+    `<div id="pfpContainer">
+    <img src="" id="characterPortrait">
+   </div>
+
+    <div id="acclinkContainer" style="font-family: WoodGod;">
+     <a href="../Profile/Profile.html" class="loginLink" >${JSON.parse(localStorage.getItem("User")).user}</a>
+     <a href="../SignUp/SignUp.html" class="signupLink">Sign Up!</a>
+    </div>`}
 }

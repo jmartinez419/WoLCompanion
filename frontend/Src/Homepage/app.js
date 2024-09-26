@@ -15,7 +15,8 @@ window.onload = function(){
 
 
 function loginLoad(){
-    if(localStorage.length == 0){
+
+    if(JSON.parse(localStorage.getItem("User")) == null){
         
         loginContainer.innerHTML +=
         `<div id="pfpContainer">
@@ -25,9 +26,9 @@ function loginLoad(){
         <div id="acclinkContainer" style="font-family: WoodGod;">
          <a href="../Login/Login.html" class="loginLink" >Login</a>
          <a href="../SignUp/SignUp.html" class="signupLink">Sign Up!</a>
-        </div>
-   `
-    }else loginContainer.innerHTML +=
+        </div>`
+   
+    }else {loginContainer.innerHTML +=
     `<div id="pfpContainer">
     <img src="" id="characterPortrait">
    </div>
@@ -35,7 +36,7 @@ function loginLoad(){
     <div id="acclinkContainer" style="font-family: WoodGod;">
      <a href="../Profile/Profile.html" class="loginLink" >${JSON.parse(localStorage.getItem("User")).user}</a>
      <a href="../SignUp/SignUp.html" class="signupLink">Sign Up!</a>
-    </div>`
+    </div>`}
 }
 
 
