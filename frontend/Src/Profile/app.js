@@ -137,13 +137,7 @@ function gettingCharacterId(){
         </section>
         </div>`
    
-    }else {loginContainer.innerHTML +=
-    `<div id="pfpContainer">
-    <img src="" id="characterPortrait">
-   </div>
-
-    <div id="acclinkContainer" style="font-family: WoodGod;">
-     <a href="../Profile/Profile.html" class="loginLink" >${JSON.parse(localStorage.getItem("User")).user}</a>
-     <a href="../SignUp/SignUp.html" class="signupLink">Sign Up!</a>
-    </div>`}
+    }else {showCharacterStats();
+      showCharacterPortrait();
+   }
 }
