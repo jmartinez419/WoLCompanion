@@ -9,7 +9,10 @@ const emoteToggle = document.getElementById(`emotes`)
 const orchestrionToggle = document.getElementById(`orchestrion`)
 
 
-
+window.onload function(){
+  let category = "mounts";
+getMounts(inputValue,category);
+}
 
 searchButton.addEventListener('click', (event) => {
   itemlist.innerHTML = ``
