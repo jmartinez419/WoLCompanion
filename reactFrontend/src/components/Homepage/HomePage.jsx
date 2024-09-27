@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Route } from "react-router-dom";
 import "./homepagestyle.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
@@ -7,6 +6,7 @@ import logo from "../Images/fflogo.jpg"
 import test1 from "../Images/ff14bg.jpg"
 import test2 from "../Images/ffxivcommunitybg.jpg"
 import test3 from "../Images/ffxivnewsbg.jpg"
+import LoginPage from "../Login/LoginPage";
 
 
 
@@ -62,8 +62,9 @@ async function getMaintenanceInfo(Length){
       for(let i = 0; i<=Length; i++){
           listItem.innerHTML +=
           
-          `<li className="listItem"><Link to={"${data.maintenance[i].url}"}><img id="listlogoimg" src={logo}>
-          <b>${data.maintenance[i].title}</b></Link>
+          `<li className="listItem">
+          <a id="newsredirectlink" href="${data.maintenance[i].url}"><img id="listlogoimg" src=${logo}>
+          <b>${data.maintenance[i].title}</b></a>
           <br/>
           Date: ${data.maintenance[i].time}</br>
           Start: ${data.maintenance[i].start}</br>
@@ -77,6 +78,7 @@ async function getMaintenanceInfo(Length){
 
 async function getTopicsInfo(Length){
   listItem.innerHTML = ``
+
   try{
       const response = await fetch('http://localhost:8081/api/test')
       const data = await response.json();
@@ -107,7 +109,7 @@ async function getStatusInfo(Length){
       for(let i = 0; i<=Length; i++){
           listItem.innerHTML +=
           
-          `<li class="listItem"><a href="${data.status[i].url}"><img id="listlogoimg" src="../Images/fflogo.jpg">
+          `<li class="listItem"><a id="newsredirectlink" href="${data.status[i].url}"><img id="listlogoimg" src=${logo}
           <b>${data.status[i].title}</b></a><br/>
           Date: ${data.status[i].time}</br>
           </li>`   
@@ -125,12 +127,12 @@ async function loginLoad(){
       
       loginContainer.innerHTML +=
       `<div id="pfpContainer">
-      <img src={logo} id="characterPortrait">
+      <img src=${logo} id="characterPortrait">
      </div>
  
       <div id="acclinkContainer">
-       <Link to={"/login"} className="loginLink" >Login</Link>
-       <Link to={"/signup"} className="signupLink">Sign Up!</Link>
+       <a href="/login" id="loginLink">Login</a>
+       <a href="/signup" id="signupLink">Sign Up!</a>
       </div>`
   }else {
       loginContainer.innerHTML +=
@@ -165,6 +167,7 @@ async function getCharacterImage(){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> */}
 
+<div className="homepagebody">
         
         <div>
      <Link to="/"><img id="logo" src={logo} alt="fflogo"/></Link>
@@ -237,7 +240,7 @@ async function getCharacterImage(){
 
    </div>
 </div>
-
+</div>
 
 </>
     );

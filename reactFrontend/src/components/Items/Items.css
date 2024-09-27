@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'WoodGod';
+    src: url("../Font/WoodgodRegular-3zpjG.ttf");
+}
+#itemsbody{
+    background-image: url(../Images/ff14itemsbg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+}
