@@ -41,6 +41,7 @@
 #formContainer{
     height: 100%;
     width: 50%;
+    margin-left: 30%;
 }
 #loginContainer{
     margin-top: 3%;
@@ -59,7 +60,6 @@
     font-family: woodgod;
     border-radius: 20px;
     box-shadow: 10px 1px 10px;
-    margin-left: 60%;
     margin-top: 10%;
     
 }
@@ -88,16 +88,17 @@
 #loginInput{
     margin-top: 3%;
     border-radius: 10px;
+    margin-bottom: 20%;
 }
 #profileOptions{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     color: black !important;
     font-family: woodgod;
-    width: 40%;
+    margin-left: 33%;
     font-size: 25px;
     margin-top: -10%;
-    margin-left: 26%;
+    
 }
 #line{
     background-color: black;

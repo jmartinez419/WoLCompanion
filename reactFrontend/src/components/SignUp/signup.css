@@ -1,0 +1,26 @@
+.signuppagebody{
+    background-image: url(../Images/ffxivprofilebg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+#characterIdInput{
+    width: 30%;
+    margin-bottom: 1%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 7px;
+    box-shadow:5px 1px 10px;
+}
+#userNameInput{
+    width: 30%;
+    margin-bottom: 1%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 7px;
+    box-shadow:5px 1px 10px;
+}
