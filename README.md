@@ -22,6 +22,18 @@ to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
+## API's
+<ol>
+  <li>ffxiv collect</li>
+  <li>ffxiv news</li>
+</ol>
+
+## Stretch Goals
+<ol>
+  <li>Creating a community board</li>
+  <li>Creating a way for people to post/being able to recruit for parties</li>
+</ol>
+
 ## Figma
 
 https://www.figma.com/design/XQpmZKK7EFy9HAfZSdmB2P/Untitled?node-id=0-1&node-type=canvas&t=qstv6QNvEcNMnbzl-0
