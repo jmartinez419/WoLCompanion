@@ -11,3 +11,118 @@
     height: 100%;
     width: 100%;
 }
+#itemContainer{ 
+    background: #eeedede9;
+    height: 100%;
+    width: 70%;
+    margin-left: 35%;
+    border-radius: 30px;
+    font-size: 30px;
+    padding-top: 1%;
+    padding-bottom: 0.5%;
+    padding-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+.source{
+    margin-left: 3%;
+}
+#mount_image{
+    border: solid rgba(138, 175, 196, 0.795);
+    width: 25%;
+    height: 40%;
+    margin-left: 4%;
+    margin-top: 4%;
+    background-color: rgba(25, 25, 25, 0.929);
+    border-radius: 20px;
+    box-shadow: 10px 1px 10px;
+}
+#achievement_image{
+    border: solid rgba(138, 175, 196, 0.795);
+    width: 20%;
+    height: 40%;
+    margin-left: 4%;
+    margin-top: 4%;
+    background-color: rgba(25, 25, 25, 0.929);
+    border-radius: 20px;
+    box-shadow: 10px 1px 10px;
+}
+.listItem{
+    border: solid;
+    margin-bottom: 10%;
+    margin-right: 3%;
+    background-color: rgba(245, 225, 124, 0.653);
+    border-radius: 20px;
+    box-shadow: 10px 5px 10px;
+}
+#buttonDiv{
+    width: 25%;
+    margin-left: 60%;   
+}
+#addButton{
+    width: 30%;
+    margin-left: 60%;
+    border-radius: 20px;
+    font-family: woodgod;
+    box-shadow: 8px 5px 10px;
+}
+#addButton:hover{
+    background-color: rgb(143, 142, 142);
+    color: whitesmoke;
+    box-shadow:8px 5px 10px black;
+}
+#addButtonAch{
+    width: 30%;
+    margin-left: 60%;
+    border-radius: 20px;
+    font-family: woodgod;
+    box-shadow: 8px 5px 10px;
+    margin-bottom: 4%;
+}
+#addButtonAch:hover{
+    background-color: rgb(143, 142, 142);
+    color: whitesmoke;
+    box-shadow:8px 5px 10px black;
+}
+#name{
+    margin-left: 30%;
+    margin-top: -100px;
+    font-size: 40px;;
+    text-decoration: underline;
+    width: 50%;
+    text-align: center;   
+}
+#patch{
+    margin-left: 4%;
+    margin-top: -4%;
+    width: 65%;
+}
+#percentOwned{
+    margin-left: 4%;
+    margin-top: -4%;
+    margin-bottom: 3%;
+}
+#minion_image{
+    border: solid black;
+    background-color: black;
+    border-radius: 20px;
+    width: 20%;
+    height: 20%;
+    margin-bottom: 4%;
+    margin-top: 3%;
+    margin-left: 3%;
+    box-shadow: 8px 6px 10px;
+}
+#description{
+    width: 80%;
+    margin-left: 4%;
+}
+#itemlist{
+    margin-left: 1%;
+    margin-bottom: 4%;
+    margin-right: 5%;
+    margin-top: 5%;
+    font-size: 30px;
+    
+    list-style: none !important;
+}
