@@ -1,0 +1,54 @@
+.profileBody{
+    background-image: url(../Images/ffxivprofilebg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    
+}
+#characterInfoContainer{
+    width: 85%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+#characterInfo{
+width: 80%;
+height: 90%;
+}
+#characterImageContainer{
+    margin-top: 1%;
+    width: 37%;
+    height: 80%; 
+}
+h1{
+    text-align: center;
+}
+#characterPicture{
+    width: 100%;
+    height: 100%;
+}
+#characterImage{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: solid rgb(3, 61, 114);
+    box-shadow: 10px 3px 10px;
+}
+#name{
+    font-family: woodgod;
+    text-decoration: underline;
+}
+#idexample{
+    width: 400px;
+}
+#charactersheet{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: 5%;
+    height: 100%;
+    text-decoration: underline;
+}

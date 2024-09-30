@@ -7,10 +7,7 @@ import { Link } from "react-router-dom"
 
 export default function NewsPage(){
 
-    window.onload = function(){
-        loginLoad()
-        getTopicsInfo(3)
-    }
+   
 
     async function getStatusInfo(Length){
         listItem.innerHTML = ``
@@ -144,6 +141,11 @@ export default function NewsPage(){
         }catch(error){
             console.error(error);
         }
+    }
+
+    window.onload = function(){
+        loginLoad()
+        getTopicsInfo(3)
     }
 
     return (

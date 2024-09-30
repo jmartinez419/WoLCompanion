@@ -203,6 +203,8 @@ body{
     background-color: rgba(245, 225, 124, 0.653);
     border-radius: 20px;
     box-shadow: 10px 5px 10px;
+    
+   
 }
 #buttonDiv{
     width: 25%;
@@ -272,6 +274,7 @@ body{
     margin-right: 5%;
     margin-top: 5%;
     font-size: 30px;
+
 }
 
 

@@ -1,18 +1,18 @@
 import React, {useRef} from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./signup.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import logo from "../Images/fflogo.jpg"
-import Login from "../Login/LoginPage"
 
 export default function SignUp(){
 
 
     const formRef = useRef(null);
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault();
         const form = formRef.current;
 
         console.dir(form);
@@ -21,17 +21,20 @@ export default function SignUp(){
             email: form.email.value,
             password: form.password.value,
             user: form.user.value,
-            character_id: form.user.characterId
+            characterId: form.characterId.value
         };
+        
 
-        // Call your Login function here
-        await sendForm(formData);
+        try {
+            await sendForm(formData);
 
-        setTimeout(() => {
-            window.location.replace(
-                <Login />
-            );
-        }, 2000);
+            setTimeout(() => {
+                navigate("/login"); 
+            }, 2000);
+        } catch (error) {
+            console.error('Failed to submit:', error);
+        }
+        
     };
 
     async function sendForm(formData){
@@ -78,7 +81,7 @@ export default function SignUp(){
                             placeholder="example@email.com" 
                             required 
                         />
-                        <label htmlFor="CharacterId">Character ID</label>
+                        <label htmlFor="characterId">Character ID</label>
                         <input
                         type="number"
                         id="characterIdInput"
