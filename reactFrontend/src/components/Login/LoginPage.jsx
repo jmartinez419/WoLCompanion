@@ -61,7 +61,7 @@ export default function LoginPage(){
      <Link to="/"><img id="logo" src={logo} alt="fflogo"/></Link>
         </div>
 
-    <div className="topnav">
+    <div id="logintopnav">
             <Link to={"/news"} className="navlinks">News</Link>
             <Link to={"/profile"} className="navlinks">Profile</Link>
             <Link to={"/items"} className="navlinks">Items</Link>

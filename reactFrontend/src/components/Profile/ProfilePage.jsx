@@ -2,16 +2,41 @@ import { Link } from "react-router-dom";
 import './profile.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "../Images/fflogo.jpg";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 
 export default function ProfilePage(){
 
-    window.onload = function(){
+const hasMounted = useRef(false);
+  const [ pfpImage, setpfpImage] =  useState(null);
+
+  useEffect(() => {
+    
+    if(!hasMounted.current){
         showCharacterPortrait();
         showCharacterStats();
-        loginLoad();
+        hasMounted.current = true;
+      async function getCharacterImage(){
+        try{
+            const response = await fetch(`https://ffxivcollect.com/api/characters/${JSON.parse(localStorage.getItem("User")).characterId}`) //;id will be changed to inputvalue after test
+            const data = await response.json()
+            console.log(data);
+            setpfpImage(data.avatar);
+        }catch(error){
+            console.log(" does not exist.")
+        }
+      } 
+
+      getCharacterImage()
     }
+    
+  }, []);
+
+  function LogoutUser(){
+      localStorage.removeItem("User")
+      Navigate("login");
+    }
+    
 
     async function getCharacterInfo() {
         try {
@@ -65,44 +90,40 @@ export default function ProfilePage(){
         }
     }
 
-    async function loginLoad(){
+    function loginLoad(){
 
-        let pfp = await getCharacterImage();
-      
+
         if(JSON.parse(localStorage.getItem("User")) == null){
-            
-            loginContainer.innerHTML +=
-            `<div id="pfpContainer">
-            <img src=${logo} id="characterPortrait">
+      
+            return ( <>
+            <div id="pfpContainer">
+            <img src={logo} id="characterPortrait"/>
            </div>
        
             <div id="acclinkContainer">
-             <a href="/login" id="loginLink">Login</a>
-             <a href="/signup" id="signupLink">Sign Up!</a>
-            </div>`
+             <a href="/login" className="loginLink">Login</a>
+             <a href="/signup" className="signupLink">Sign Up!</a>
+            </div>
+            </>)
         }else {
-            loginContainer.innerHTML +=
-        `<div id="pfpContainer">
-        <img src="${pfp.avatar}" id="characterPortrait">
+          
+           return (
+           <>
+        <div id="pfpContainer">
+        <img src={pfpImage} id="characterPortrait"/>
        </div>
       
-        <div id="acclinkContainer" style="font-family: WoodGod;">
-         <Link to={"/profile"} className="loginLink" >${JSON.parse(localStorage.getItem("User")).user}</a>
-         <Link to={"/login"} id="logout" className="signupLink">Logout</a>
-        </div>`
-      }
+        <div id="acclinkContainer">
+         <a href="/profile" className="loginLink" >{JSON.parse(localStorage.getItem("User")).user}</a>
+         <a href="/login" id="logout" className="signupLink" onClick={LogoutUser}>Logout</a>
+        </div>
+        </>
+        )
+       }
+      
       }
       
-      async function getCharacterImage(){
-        try{
-            const response = await fetch(`https://ffxivcollect.com/api/characters/${JSON.parse(localStorage.getItem("User")).characterId}`) //;id will be changed to inputvalue after test
-            const data = await response.json()
-            console.log(data);
-            return data;
-        }catch(error){
-            console.log(" does not exist.")
-        }
-      }
+      
 
     return (
         
@@ -143,8 +164,7 @@ export default function ProfilePage(){
     <div id="rightSide">
 
    <div id="loginContainer">
-
-
+    {loginLoad()}
    </div>
 
   <div className="jobguideContainer" >

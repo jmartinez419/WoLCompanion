@@ -259,6 +259,52 @@
 //         </>
 //     );
 // }
+// const handleAddItem = async (item) => {
+    //     console.log("Item received:", item); // Log the item to see its structure
+    //     const { item_id: itemid } = item; // Use item_id instead of itemid
+
+    //     // Get the user ID from local storage
+    //     const user = JSON.parse(localStorage.getItem("User"));
+    //     console.log("User from local storage:", user); // Log the user object
+    //     const uid = user ? user.uid : null; // Use uid instead of id
+
+    //     // Check that category is set correctly
+    //     if (!category) {
+    //         console.error("Category is not selected.");
+    //         return;
+    //     }
+
+    //     // Prepare the payload
+    //     const payload = { itemid, category, uid };
+
+    //     // Validate payload
+    //     if (!itemid || !category || !uid) {
+    //         console.error('Missing itemid, category, or uid');
+    //         return; // Optionally, show an error message to the user
+    //     }
+
+    //     try {
+    //         const response = await fetch('http://localhost:8081/addItem', {
+    //             method: 'POST',
+    //             headers: { 'Content-Type': 'application/json' },
+    //             body: JSON.stringify(payload),
+    //         });
+
+    //         if (response.ok) {
+    //             console.log('Item added successfully!');
+    //             // Optionally, update state or show success notification
+    //         } else {
+    //             const errorData = await response.json();
+    //             console.error('Failed to add item:', response.statusText, errorData);
+    //             // Optionally, show an error message to the user
+    //             alert(`Failed to add item: ${errorData.message || response.statusText}`);
+    //         }
+    //     } catch (error) {
+    //         console.error('Error adding item:', error);
+    //         // Optionally, show an error message to the user
+    //         alert('An error occurred while adding the item. Please try again later.');
+    //     }
+    // };
 
 import { Link } from "react-router-dom";
 import "../Items/Items.css";
@@ -266,59 +312,43 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import logo from "../Images/fflogo.jpg";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function ItemsPage() {
     const [inputValue, setInputValue] = useState('');
-    const [category, setCategory] = useState('');
+    const [category, setCategory] = useState('mounts');
     const [items, setItems] = useState([]);
 
-    const handleAddItem = async (item) => {
-        console.log("Item received:", item); // Log the item to see its structure
-        const { item_id: itemid } = item; // Use item_id instead of itemid
+    const hasMounted = useRef(false);
+  const [ pfpImage, setpfpImage] =  useState(null);
 
-        // Get the user ID from local storage
-        const user = JSON.parse(localStorage.getItem("User"));
-        console.log("User from local storage:", user); // Log the user object
-        const uid = user ? user.uid : null; // Use uid instead of id
+  useEffect(() => {
+    
+    if(!hasMounted.current){
+      handleSearch();
+      hasMounted.current = true;
 
-        // Check that category is set correctly
-        if (!category) {
-            console.error("Category is not selected.");
-            return;
+      async function getCharacterImage(){
+        try{
+            const response = await fetch(`https://ffxivcollect.com/api/characters/${JSON.parse(localStorage.getItem("User")).characterId}`) //;id will be changed to inputvalue after test
+            const data = await response.json()
+            console.log(data);
+            setpfpImage(data.avatar);
+        }catch(error){
+            console.log(" does not exist.")
         }
+      } 
 
-        // Prepare the payload
-        const payload = { itemid, category, uid };
+      getCharacterImage()
+    }
+    
+  }, []);
 
-        // Validate payload
-        if (!itemid || !category || !uid) {
-            console.error('Missing itemid, category, or uid');
-            return; // Optionally, show an error message to the user
-        }
+  function LogoutUser(){
+      localStorage.removeItem("User")
+      Navigate("login");
+    }
 
-        try {
-            const response = await fetch('http://localhost:8081/addItem', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
-            });
-
-            if (response.ok) {
-                console.log('Item added successfully!');
-                // Optionally, update state or show success notification
-            } else {
-                const errorData = await response.json();
-                console.error('Failed to add item:', response.statusText, errorData);
-                // Optionally, show an error message to the user
-                alert(`Failed to add item: ${errorData.message || response.statusText}`);
-            }
-        } catch (error) {
-            console.error('Error adding item:', error);
-            // Optionally, show an error message to the user
-            alert('An error occurred while adding the item. Please try again later.');
-        }
-    };
 
     async function getStuff(inputValue, category) {
         try {
@@ -380,31 +410,38 @@ export default function ItemsPage() {
         return data;
     }
 
-    async function loginLoad(){
-        let pfp = await getCharacterImage();
+    function loginLoad(){
+
 
         if(JSON.parse(localStorage.getItem("User")) == null){
-            loginContainer.innerHTML +=
-            `<div id="pfpContainer">
-                <img src=${logo} id="characterPortrait">
-            </div>
-
+      
+            return ( <>
+            <div id="pfpContainer">
+            <img src={logo} id="characterPortrait"/>
+           </div>
+       
             <div id="acclinkContainer">
-                <a href="/login" id="loginLink">Login</a>
-                <a href="/signup" id="signupLink">Sign Up!</a>
-            </div>`;
-        } else {
-            loginContainer.innerHTML +=
-            `<div id="pfpContainer">
-                <img src="${pfp.avatar}" id="characterPortrait">
+             <a href="/login" className="loginLink">Login</a>
+             <a href="/signup" className="signupLink">Sign Up!</a>
             </div>
-
-            <div id="acclinkContainer" style="font-family: WoodGod;">
-                <Link to={"/profile"} className="loginLink">${JSON.parse(localStorage.getItem("User")).user}</Link>
-                <Link to={"/login"} id="logout" className="signupLink">Logout</Link>
-            </div>`;
-        }
-    }
+            </>)
+        }else {
+          
+           return (
+           <>
+        <div id="pfpContainer">
+        <img src={pfpImage} id="characterPortrait"/>
+       </div>
+      
+        <div id="acclinkContainer">
+         <a href="/profile" className="loginLink" >{JSON.parse(localStorage.getItem("User")).user}</a>
+         <a href="/login" id="logout" className="signupLink" onClick={LogoutUser}>Logout</a>
+        </div>
+        </>
+        )
+       }
+      
+      }
 
     async function getCharacterImage(){
         try{
@@ -417,9 +454,7 @@ export default function ItemsPage() {
         }
     }
 
-    window.onload = function(){
-        loginLoad();
-    }
+   
 
     return (
         <>
@@ -496,7 +531,9 @@ export default function ItemsPage() {
                     </div>
 
                     <div id="rightSide">
-                        <div id="loginContainer"></div>
+                        <div id="loginContainer">
+                            {loginLoad()}
+                        </div>
                         <div className="jobguideContainer">
                             <a className="jobguidebuttonlink" href="https://na.finalfantasyxiv.com/jobguide/battle/?utm_source=lodestone&utm_medium=pc_banner&utm_campaign=na_jobguide" target="_blank">
                                 <button id="jobguideButton">Job Guide</button>
