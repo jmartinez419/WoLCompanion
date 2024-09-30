@@ -94,8 +94,8 @@ export default function LoginPage(){
                     </form>
 
                     <div id="profileOptions">
-                        <Link to="/ForgotPassword" className="loginOptions">Forgot Password</Link>
-                        <div id="line"></div>
+                        {/* <Link to="/ForgotPassword" className="loginOptions">Forgot Password</Link> */}
+                        {/* <div id="line"></div> */}
                         <Link to="/SignUp" className="loginOptions">New User</Link>
                     </div>
                 </div>

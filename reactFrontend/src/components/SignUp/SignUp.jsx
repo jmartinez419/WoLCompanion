@@ -69,9 +69,9 @@ export default function SignUp(){
     </div>
 
     
-            <div id="loginFormContainer">
-                <div id="formContainer">
-                    <form id="contactForm" ref={formRef} onSubmit={handleSubmit}>
+            <div id="signupFormContainer">
+                <div id="signupformContainer">
+                    <form id="signupcontactForm" ref={formRef} onSubmit={handleSubmit}>
                         <label style={{ marginTop: '20%' }} htmlFor="emailInput">Email:</label>
                         <input 
                             type="email" 
@@ -112,9 +112,7 @@ export default function SignUp(){
                     </form>
 
                     <div id="profileOptions">
-                        <Link to="/ForgotPassword" className="loginOptions">Forgot Password</Link>
-                        <div id="line"></div>
-                        <Link to="/SignUp" className="loginOptions">New User</Link>
+                        <Link to="/login" className="loginOptions" id="signupLogin">Already Have an Account?</Link>
                     </div>
                 </div>
             </div>
