@@ -41,7 +41,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
         public CorsConfigurationSource corsConfigurationSource(){
         
             CorsConfiguration config = new CorsConfiguration();
-            config.addAllowedOrigin("http://localhost:5500");
+            config.addAllowedOrigin("http://localhost:5173");
 
             config.addAllowedMethod("*");
             config.addAllowedHeader("*");
