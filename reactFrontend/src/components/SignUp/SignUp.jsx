@@ -23,6 +23,7 @@ export default function SignUp(){
             user: form.user.value,
             characterId: form.characterId.value
         };
+        console.log(formData);
         
 
         try {

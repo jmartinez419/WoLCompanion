@@ -1,11 +1,36 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Support.css'; 
 import logo from '../Images/fflogo.jpg'; 
+import emailjs from '@emailjs/browser';
 
 export default function SupportPage() {
+
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+    .sendForm('service_bngzddg', 'template_a25lh8o', form.current,{
+        publicKey: 'ehxkHinQH0vSTHOWS'
+    })
+    .then(
+        () => {
+            console.log('Success!');
+        },
+        (error) => {
+            console.log('Failed..', error.text);
+        },
+    );
+  };
+
+
+
+
+
     return (
         <>
         <div className='supportbody'>
@@ -25,7 +50,7 @@ export default function SupportPage() {
                 <Row>
                     <Col id="leftSide">
                         <div id="formContainer">
-                            <Form id="contactForm">
+                            <Form id="contactForm" ref={form} onSubmit={sendEmail}>
                                 <h2 id="contactHeader">Contact us!</h2>
                                 <Form.Group controlId="emailInput" className='contactUserInput'>
                                     <Form.Label>Email:</Form.Label>
@@ -49,7 +74,7 @@ export default function SupportPage() {
                                 <Form.Group controlId="messageInput" className='contactUserInput'>
                                     <Form.Label>Message:</Form.Label>
                                     <Form.Control
-                                        as="textarea"
+                                        name="textarea"
                                         rows={10}
                                         maxLength={500}
                                         placeholder="How can we help?"
@@ -58,7 +83,7 @@ export default function SupportPage() {
                                         
                                     />
                                 </Form.Group>
-                                <Button id="submitInput" type="submit" variant="primary">
+                                <Button id="submitInput" type="submit" variant="primary" value="Send">
                                     Submit
                                 </Button>
                             </Form>
