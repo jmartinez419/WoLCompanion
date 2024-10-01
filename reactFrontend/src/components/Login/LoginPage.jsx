@@ -1,5 +1,5 @@
 import React, {useRef} from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./loginpagestyle.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
@@ -8,9 +8,10 @@ import logo from "../Images/fflogo.jpg"
 export default function LoginPage(){
 
     const formRef = useRef(null);
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault(); 
         const form = formRef.current;
 
         console.dir(form);
@@ -20,14 +21,16 @@ export default function LoginPage(){
             password: form.password.value,
         };
 
-        // Call your Login function here
-        await Login(formData);
+        
+        try{
+            await Login(formData);
 
-        setTimeout(() => {
-            window.location.replace(
-                {Homepage}
-            );
-        }, 2000);
+            setTimeout(() => {
+                navigate("/profile");
+            }, 2000);
+        } catch (error) {
+            console.error('Failed to Login;', error)
+        }
     };
 
 
