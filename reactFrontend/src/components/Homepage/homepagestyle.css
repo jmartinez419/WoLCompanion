@@ -70,16 +70,13 @@
     font-style: italic;
     font-family: WoodGod;
     border: solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    width: 80%;
+    height: 100px !important;
+    width: 80% !important;
     border-radius: 30px;
     font-size: 80px;
     box-shadow: 10px 10px 10px black;
-    margin-top: 20%;
-    margin-left: 20%;
+    margin-top: 13% !important;
+    margin-left: 20% !important;
 }
 #jobguideButton:hover{
     box-shadow: 10px 10px 10px goldenrod;
@@ -95,15 +92,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    width: 80%;
+    height: 100px !important;
+    width: 80% !important;
     border: solid black;
-    margin-left: 20%;
+    margin-left: 20% !important;
     border-radius: 30px;
-    font-size: 80px;
-    margin-top: -8%;
+    font-size: 80px ;
+    
     box-shadow: 10px 10px 10px black;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 #craftguideButton:hover{
     box-shadow: 10px 10px 10px goldenrod;
@@ -175,10 +172,10 @@
     border-radius: 40px;
     background-color: rgba(0, 0, 0, 0.863);
     font-style: italic;
-    width: 60%;
-    height: 11%;
-    margin-top: 10%;
-    margin-left: 30%;
+    width: 90% !important;
+    height: 20% !important;
+    margin-top: 10% ;
+    margin-left: 13% !important;
 }
 #loginLink{
     font-size: 25px;
@@ -224,7 +221,7 @@
 }
 
 
- @media (max-width: 1440px) {
+ /* @media (min-width: 1440px) {
 
     #craftguideButton{
         margin-left: 29%;
@@ -245,4 +242,4 @@
         margin-top: 10px;
         width: 60px;
     }
-}
+} */

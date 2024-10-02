@@ -211,13 +211,13 @@ async function getCharacterImage(){
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <a href="https://mogstation.com"><img id="firstslide" className="slide" src={img1}/></a>
+            <a href="https://mogstation.com" target="_blank"><img id="firstslide" className="slide" src={img1}/></a>
           </div>
           <div className="carousel-item">
-            <a href="https://ffxiv.com"><img id="secondslide" className="slide" src={img2}/></a>
+            <a href="https://www.finalfantasyxiv.com/" target="_blank"><img id="secondslide" className="slide" src={img2}/></a>
           </div>
           <div className="carousel-item">
-            <a href="https://na.finalfantasyxiv.com/lodestone/community_finder/?utm_source=launcher&utm_medium=banner&utm_campaign=na_cf"><img id="thirdslide" className="slide"src={img3}/></a>
+            <a href="https://na.finalfantasyxiv.com/lodestone/community_finder/?utm_source=launcher&utm_medium=banner&utm_campaign=na_cf" target="_blank"><img id="thirdslide" className="slide"src={img3}/></a>
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -247,7 +247,6 @@ async function getCharacterImage(){
    <div id="rightSide">
 
    <div id="loginContainer">
-
     {loginLoad()}
    </div>
 

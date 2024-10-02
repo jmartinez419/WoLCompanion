@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef , useState} from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,6 +7,11 @@ import logo from '../Images/fflogo.jpg';
 import emailjs from '@emailjs/browser';
 
 export default function SupportPage() {
+
+    const[showPopup, setShowPopup] = useState(false);
+    const handleButtonClick = () => {
+        setShowPopup(true);
+    };
 
     const form = useRef();
 
@@ -49,7 +54,7 @@ export default function SupportPage() {
             <Container id="main">
                 <Row>
                     <Col id="leftSide">
-                        <div id="formContainer">
+                        <div id="supportformContainer">
                             <Form id="contactForm" ref={form} onSubmit={sendEmail}>
                                 <h2 id="contactHeader">Contact us!</h2>
                                 <Form.Group controlId="emailInput" className='contactUserInput'>
@@ -84,7 +89,8 @@ export default function SupportPage() {
                                         
                                     />
                                 </Form.Group>
-                                <Button id="submitInput" type="submit" variant="primary" value="Send">
+                                {showPopup && <p id='messageConfirm'>Message Sent!</p>}
+                                <Button id="submitInput" type="submit" variant="primary" value="Send" onClick={handleButtonClick}>
                                     Submit
                                 </Button>
                             </Form>

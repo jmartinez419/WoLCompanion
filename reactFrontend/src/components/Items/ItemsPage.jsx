@@ -245,7 +245,7 @@ export default function ItemsPage() {
                                         {item.description && <p id="description">{item.description} {item.enhanced_description}</p>}
                                         <p id="patch">This {category.slice(0, -1)} came out in patch {item.patch}.</p>
                                         <p id="percentOwned">Only <b>{item.owned}</b> of players have this {category.slice(0, -1)} currently.</p>
-                                        <p style={{ marginLeft: '3%', textDecoration: 'underline', marginBottom: '-5%' }}><b>How to achieve:</b></p>
+                                        {item.sources && <p style={{ marginLeft: '3%', textDecoration: 'underline', marginBottom: '-5%' }}><b>How to achieve:</b></p>}
                                         {/* <button id="addButton" onClick={() => handleAddItem({ ...item })}>Add</button> */}
                                         {item.sources && item.sources.map((source, j) => (
                                             <div key={j}>

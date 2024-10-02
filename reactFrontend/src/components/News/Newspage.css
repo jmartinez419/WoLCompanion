@@ -40,7 +40,7 @@
     background-color: rgba(0, 0, 0, 0.852);
     display: flex;
     justify-content: space-evenly;
-    font-size: 60px;
+    font-size: 45px;
     font-style: italic;
     border: solid; 
     width: 80%;
@@ -53,16 +53,13 @@ a {
     text-decoration: none !important;
   }
 
-/* b{
-    color: black; 
-} */
 .info{
     background: #eeedede9;
     height: 100%;
     width: 70%;
     margin-left: 33%;
     border-radius: 30px;
-    font-size: 30px;
+    font-size: 25px;
     padding-top: 1%;
     padding-left: 1%;
 }
@@ -135,56 +132,6 @@ a {
     margin-right: -5%;
     justify-content: center;
     align-items: center;
-}
-#craftguideButton{
-    background-image: url(../Images/ffxivcrafting.webp);
-    background-repeat: no-repeat;
-    background-size:cover;
-    color: whitesmoke;
-    font-style: italic;
-    font-family: WoodGod;
-    display: flex;
-    height: 200px;
-    width: 80%;
-    border: solid black;
-    justify-content: center;
-    align-items: center;
-    margin-left: 12%;
-    border-radius: 30px;
-    font-size: 80px;
-    margin-top: -8%;
-    box-shadow: 14px 1px 10px black;
-    margin-top: 5%;
-    margin-right: 23%;
-}
-#craftguideButton:hover{
-    box-shadow: 14px 1px 10px goldenrod;
-    border-color: goldenrod;
-}
-#jobguideButton{
-    background-image: url(../Images/ffxivalljobs.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    color: whitesmoke;
-    font-style: italic;
-    font-family: WoodGod;
-    display: flex;
-    height: 200px;
-    width: 80%;
-    border: solid black;
-    justify-content: center;
-    align-items: center;
-    margin-left: 12%; 
-    border-radius: 30px;
-    font-size: 80px;
-    box-shadow: 14px 1px 10px black;
-    margin-top: 15%;
-    margin-right: 23%;
-}
-#jobguideButton:hover{
-    box-shadow: 14px 1px 10px goldenrod;
-    border-color: goldenrod;  
-    
 }
 
 

@@ -4,7 +4,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    height: 100%; 
 }
 
 #logintopnav{
@@ -36,7 +35,7 @@
 }
 
 #formContainer{
-    height: 100%;
+    height: 100% !important;
     width: 50%;
     margin-left: 27%;
 }
@@ -50,6 +49,7 @@
     background-color: #d9d9d9e6;
     display: flex;
     width: 80% !important;
+    height: 80% !important;
     flex-direction: column;
     align-items: center;
     font-size: 30px;
@@ -57,7 +57,8 @@
     border-radius: 20px;
     box-shadow: 10px 1px 10px;
     margin-top: 10%;
-    
+    margin-bottom: 20%; 
+   
 }
 #contactHeader{
     font-size: 50px;
@@ -103,10 +104,14 @@
     flex-direction: row;
     color: black !important;
     font-family: woodgod;
-    margin-left: 35%;
+    margin-left: 29%;
     font-size: 25px;
-    margin-top: -10%;
+    margin-top: -5%;
     text-decoration: underline;
+}
+#LoginPageOption{
+    margin-top: -38% !important;
+    margin-left: 19%;
 }
 #line{
     background-color: black;
@@ -115,7 +120,8 @@
 }
 .loginOptions{
     color: black;
-    margin-left: 15%;    
+    margin-left: 15%; 
+    margin-top: -5% !important;   
 }
 a:hover{
     color: black;

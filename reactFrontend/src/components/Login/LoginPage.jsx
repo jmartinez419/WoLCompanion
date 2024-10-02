@@ -99,7 +99,7 @@ export default function LoginPage(){
                     <div id="profileOptions">
                         {/* <Link to="/ForgotPassword" className="loginOptions">Forgot Password</Link> */}
                         {/* <div id="line"></div> */}
-                        <Link to="/SignUp" className="loginOptions">New User</Link>
+                        <Link to="/SignUp" id="LoginPageOption" className="loginOptions">New User</Link>
                     </div>
                 </div>
             </div>
