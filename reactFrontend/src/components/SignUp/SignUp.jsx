@@ -12,10 +12,10 @@ export default function SignUp(){
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
-        event.preventDefault();
-        const form = formRef.current;
 
-        console.dir(form);
+        event.preventDefault();
+
+        const form = formRef.current;
 
         const formData = {
             email: form.email.value,
@@ -24,7 +24,8 @@ export default function SignUp(){
             characterId: form.characterId.value
         };
         console.log(formData);
-        
+       
+        if(form.password.value == form.confirmPassword.value){
 
         try {
             await sendForm(formData);
@@ -35,6 +36,7 @@ export default function SignUp(){
         } catch (error) {
             console.error('Failed to submit:', error);
         }
+    } else console.log("Password do not match");
         
     };
 
@@ -73,7 +75,7 @@ export default function SignUp(){
             <div id="signupFormContainer">
                 <div id="signupformContainer">
                     <form id="signupcontactForm" ref={formRef} onSubmit={handleSubmit}>
-                        <label style={{ marginTop: '20%' }} htmlFor="emailInput">Email:</label>
+                        <label style={{ marginTop: '5%' }} htmlFor="emailInput">Email:</label>
                         <input 
                             type="email" 
                             id="emailInput" 
@@ -88,7 +90,7 @@ export default function SignUp(){
                         id="characterIdInput"
                         maxLength="30"
                         name="characterId"
-                        placeholder="723112"
+                        placeholder="7231112"
                         required
                         />
                         <label htmlFor="user">User Name</label>
@@ -107,6 +109,14 @@ export default function SignUp(){
                             name="password" 
                             placeholder="Password" 
                             required 
+                        />
+                        <label htmlFor="confirmpassword">Confirm Password:</label>
+                        <input
+                           type="password"
+                           id="confirmPassword"
+                           name="confirmPassword"
+                           placeholder="Confirm Password"
+                           required
                         />
                         
                         <input id="loginInput" type="submit" value="Submit" />

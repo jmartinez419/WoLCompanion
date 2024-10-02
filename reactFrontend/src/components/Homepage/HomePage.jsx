@@ -3,9 +3,9 @@ import "./homepagestyle.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import logo from "../Images/fflogo.jpg"
-import test1 from "../Images/ff14bg.jpg"
-import test2 from "../Images/ffxivcommunitybg.jpg"
-import test3 from "../Images/ffxivnewsbg.jpg"
+import img1 from "../Images/mogstationBanner.png"
+import img2 from "../Images/ffxivSiteBanner2.png"
+import img3 from "../Images/ffxivcommunityfinder.png"
 import LoginPage from "../Login/LoginPage";
 import { useRef, useEffect, Navigate, useState } from "react";
 
@@ -55,8 +55,12 @@ async function getTopicsInfo(Length){
       for(let i = 0; i<=Length; i++){
           listItem.innerHTML +=
           `<a href="${data.topics[i].url}"><img id="listitemimg" src="${data.topics[i].image}"></a>
-          <li class="listItem"> <b>${data.topics[i].title}</b><br/>
-          ${data.topics[i].description}</br>
+          <li class="listItem"> <b>${data.topics[i].title}</b>
+          <br/>
+          <p class="newsDescription>
+          ${data.topics[i].description}
+          </p>
+          </br>
           ${data.topics[i].time}
           </li>`   
       }
@@ -207,13 +211,13 @@ async function getCharacterImage(){
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img id="firstslide" className="slide" src={test1}/>
+            <a href="https://mogstation.com"><img id="firstslide" className="slide" src={img1}/></a>
           </div>
           <div className="carousel-item">
-            <img id="secondslide" className="slide" src={test2}/>
+            <a href="https://ffxiv.com"><img id="secondslide" className="slide" src={img2}/></a>
           </div>
           <div className="carousel-item">
-            <img id="thirdslide" className="slide"src={test3}/>
+            <a href="https://na.finalfantasyxiv.com/lodestone/community_finder/?utm_source=launcher&utm_medium=banner&utm_campaign=na_cf"><img id="thirdslide" className="slide"src={img3}/></a>
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

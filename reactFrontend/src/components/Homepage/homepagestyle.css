@@ -27,7 +27,6 @@
     width: 8%; 
     margin-top: 1%;
     border-radius: 45px;
-  
     margin-left: 5%;
 }
 
@@ -144,19 +143,18 @@
 }
 .info{
     background: #eeedede9;
-    /* height: 100%; */
     width: 70%;
     margin-left: 33%;
     border-radius: 30px;
     font-size: 25px;
-    padding-top: 1%;
-    padding-left: 1%;
+    padding: 2%;
 }
 #listItem{
     margin-left: 2%;
     margin-bottom: 1%;
     margin-right: 2%;
     list-style: none;
+    
 }
 #newsredirectlink{
     text-decoration: none !important;

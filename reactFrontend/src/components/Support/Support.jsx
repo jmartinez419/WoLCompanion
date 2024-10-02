@@ -43,7 +43,7 @@ export default function SupportPage() {
             <Link to={"/news"} className="navlinks">News</Link>
             <Link to={"/profile"} className="navlinks">Profile</Link>
             <Link to={"/items"} className="navlinks">Items</Link>
-            <Link to={"/support"} className="navlinks" >Support</Link>
+            <Link to={"/"} className="navlinks" >Home</Link>
     </div>
 
             <Container id="main">
@@ -73,8 +73,9 @@ export default function SupportPage() {
                                 </Form.Group>
                                 <Form.Group controlId="messageInput" className='contactUserInput'>
                                     <Form.Label>Message:</Form.Label>
-                                    <Form.Control
-                                        name="textarea"
+                                    <Form.Control 
+                                        as="textarea"
+                                        name="message"
                                         rows={10}
                                         maxLength={500}
                                         placeholder="How can we help?"

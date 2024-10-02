@@ -25,6 +25,17 @@
 }
 .source{
     margin-left: 3%;
+    margin-top: 5%;
+}
+.itemPicture{ 
+    background-color: rgba(0, 0, 0, 0.719);
+    width: 20%;
+    height: 15%;
+    margin-left: 5%;
+    margin-top: 2%;
+    border: solid;
+    border-radius: 20px;
+    box-shadow: 5px 1px 10px;
 }
 #mount_image{
     border: solid rgba(138, 175, 196, 0.795);
@@ -53,6 +64,7 @@
     background-color: rgba(245, 225, 124, 0.653);
     border-radius: 20px;
     box-shadow: 10px 5px 10px;
+    padding: 3%;
 }
 #buttonDiv{
     width: 25%;
@@ -93,12 +105,11 @@
 }
 #patch{
     margin-left: 4%;
-    margin-top: -4%;
     width: 65%;
+    margin-top: 5%;
 }
 #percentOwned{
     margin-left: 4%;
-    margin-top: -4%;
     margin-bottom: 3%;
 }
 #minion_image{
@@ -113,8 +124,9 @@
     box-shadow: 8px 6px 10px;
 }
 #description{
-    width: 80%;
+    width: 95%;
     margin-left: 4%;
+    margin-top: 10%;
 }
 #itemlist{
     margin-left: 1%;
