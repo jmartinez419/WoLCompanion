@@ -7,6 +7,9 @@ import com.ff_fetch.fetch.dto.UserDto;
 import com.ff_fetch.fetch.repository.ItemRepository;
 import com.ff_fetch.fetch.repository.UserRepository;
 import com.ff_fetch.fetch.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.javapoet.ClassName;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +21,7 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
     private ItemRepository itemRepository;
     private PasswordEncoder passwordEncoder;
+    private final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     public UserServiceImpl(UserRepository userRepository, ItemRepository itemRepository,
                            PasswordEncoder passwordEncoder){
@@ -70,9 +74,9 @@ public class UserServiceImpl implements UserService {
         User user = findUserByEmail(Email);
 
         if(passwordEncoder.matches(Password,user.getPassword())){
-            System.out.println("Login Successful");
+            logger.info("Login Successful");
             return  user;
-        }
+        }else logger.warn("Login unsuccessfula");
 
         return null;
     }
