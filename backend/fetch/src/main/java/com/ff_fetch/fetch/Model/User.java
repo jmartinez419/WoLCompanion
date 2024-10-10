@@ -43,4 +43,8 @@ public class User {
         CharacterId = characterId;
         Items = items;
     }
+
+    public User(String mail) {
+        Email = mail;
+    }
 }

@@ -93,10 +93,7 @@ public class UserServiceImpl implements UserService {
     }
 
 
-    @Override
-    public User findUserByEmail(User Email) {
-        return null;
-    }
+
 
 //    private itemList checkItemListExist() {
 //        itemList itemlist = new itemList();
